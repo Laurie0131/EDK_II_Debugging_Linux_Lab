@@ -458,7 +458,7 @@ Note:
 @title[Lab 1: Adding Debug Statements]
 <br>
 <br>
-<p align="Left"><span class="gold" >Lab 1: Adding Debug Statements</span></p>
+<p align="Left"><span class="gold" ><b>Lab 1: Adding Debug Statements</b></span></p>
 <br>
 <div class="left1">
 <span style="font-size:0.8em" >In this lab, you’ll add debug statements to the previous lab's SampleApp UEFI Shell application</span>
@@ -473,7 +473,7 @@ This lab uses code from a previous exercise as a starting point (refer to  Writi
 
 ---
 @title[Lab 1: Catch Up SampleApp]
-<p align="right"><span class="gold" >Lab 1: Catch up from previous lab</span></p>
+<p align="right"><span class="gold" ><b>Lab 1: Catch up from previous lab</b></span></p>
 <span style="font-size:0.8em" >Skip if Lab <a href="https://gitpitch.com/tianocore-training/Writing_UEFI_App_Lab/master#/">Writing UEFI App Lab</a> completed</span>
 <ul>
    <li><span style="font-size:0.8em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_LAB/master#/">Lab Setup</a> from previous Labs  </span></li>
@@ -494,7 +494,7 @@ Note:
 
 ---
 @title[Lab 1: Add debug statements SampleApp]
-<p align="right"><span class="gold" >Lab 1: Add debug statements to SampleApp</span></p>
+<p align="right"><span class="gold" ><b>Lab 1: Add debug statements to SampleApp</b></span></p>
 <br>
 <ul>
   <li><span style="font-size:0.8em" >Open a Terminal Command Prompt (Cnt-Alt-T) and type cd ~/src/edk2<br></span>&nbsp;&nbsp;&nbsp;<span style="font-size:0.6em" ><span style="background-color: #101010">&nbsp;` bash$  .  edksetup.sh `&nbsp;</span> </span></li><br>
@@ -511,7 +511,7 @@ Note:
 
 ---
 @title[Lab 1: Add debug statements SampleApp 02]
-<p align="right"><span class="gold" >Lab 1: Add debug statements to SampleApp</span></p>
+<p align="right"><span class="gold" ><b>Lab 1: Add debug statements to SampleApp</b></span></p>
 <p style="line-height:90%"><span style="font-size:0.7em" >Locate the `UefiMain` function. Then copy and paste the following code after the <span style="background-color: #101010">&nbsp;“`EFI_INPUT_KEY  KEY;`”</span> statement: and before the first <span style="background-color: #101010">&nbsp;`Print()` </span>statement </span></p>
 ```c
 DEBUG ((0xffffffff, "\n\nUEFI Base Training DEBUG DEMO\n") );
@@ -541,7 +541,7 @@ Note:
 
 ---?image=/assets/images/slides/Slide26.JPG
 @title[Lab 1: Update the Qemu Script]
-<p align="right"><span class="gold" >Lab 1: Update the Qemu Script</span></p>
+<p align="right"><span class="gold" ><b>Lab 1: Update the Qemu Script</b></span></p>
 
 Note:
 
@@ -554,7 +554,7 @@ Note:
 
 ---
 @title[Lab 1 Build and Test Application]
-<p align="right"><span class="gold" >Lab 1: Build and Test Application</span></p>
+<p align="right"><span class="gold" ><b>Lab 1: Build and Test Application</b></span></p>
 <br>
 <span style="font-size:0.8em" >Build SampleApp – Cd to ~/src/edk2 dir </span>
 ```shell
@@ -577,7 +577,7 @@ Note:
 
 ---?image=/assets/images/slides/Slide28.JPG
 @title[Lab 1: Run Qemu Script]
-<p align="right"><span class="gold" >Lab 1: Run the Qemu Script</span></p>
+<p align="right"><span class="gold" ><b>Lab 1: Run the Qemu Script</b></span></p>
 <br>
 <div class="left">
 <span style="font-size:0.7em" >Test by Invoking Qemu</span>
@@ -609,7 +609,7 @@ Note:
 @title[Lab 2: Changing PCD Value]
 <br>
 <br>
-<p align="Left"><span class="gold" >Lab 2: Changing PCD Value</span></p>
+<p align="Left"><span class="gold" ><b>Lab 2: Changing PCD Value</b></span></p>
 <br>
 <div class="left1">
 <span style="font-size:0.8em" >In this lab, you’ll  learn how to use PCD values to change debugging capabilities. </span>
@@ -626,7 +626,7 @@ In this lab, you’ll learn how to use PCD values to change debugging capabiliti
 
 ---
 @title[Lab 2: Change PCDs for SampleApp]
-<p align="right"><span class="gold" >Lab 2: Change PCDs for SampleApp</span></p>
+<p align="right"><span class="gold" ><b>Lab 2: Change PCDs for SampleApp</b></span></p>
 <br>
 <span style="font-size:0.7em" >Open `~src/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
 <span style="font-size:0.7em" >Replace `SampleApp/SampleApp.inf` with the following:</span><br>
@@ -650,7 +650,7 @@ Note:
 
 ---?image=/assets/images/slides/Slide28.JPG
 @title[Lab 2: Run Qemu Script]
-<p align="right"><span class="gold" >Lab 2: Run the Qemu Script</span></p>
+<p align="right"><span class="gold" ><b>Lab 2: Run the Qemu Script</b></span></p>
 <br>
 <div class="left">
 <span style="font-size:0.7em" >Test by Invoking Qemu</span>
@@ -1111,7 +1111,7 @@ Note:
 @title[Lab 3: Library Instances for Debugging]
 <br>
 <br>
-<p align="Left"><span class="gold" >Lab 3: Library Instances for Debugging</span></p>
+<p align="Left"><span class="gold" ><b>Lab 3: Library Instances for Debugging</b></span></p>
 <br>
 <div class="left1">
 <span style="font-size:0.8em" >In this lab,  you’ll learn how to add specific debug library instances. </span><br>
@@ -1125,7 +1125,7 @@ Note:
 
 ---
 @title[Lab 3: Using Library Instances for Debugging]
-<p align="right"><span class="gold" >Lab 3: Using Library Instances for Debugging</span></p>
+<p align="right"><span class="gold" ><b>Lab 3: Using Library Instances for Debugging</b></span></p>
 <br>
 <span style="font-size:0.7em" >Open `~src/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
 <span style="font-size:0.7em" >Replace `SampleApp/SampleApp.inf { . . .}` with the following:</span><br>
@@ -1147,7 +1147,7 @@ Note:
 
 ---?image=/assets/images/slides/Slide62.JPG
 @title[Lab 3: Run Qemu Script]
-<p align="right"><span class="gold" >Lab 3: Run the Qemu Script</span></p>
+<p align="right"><span class="gold" ><b>Lab 3: Run the Qemu Script</b></span></p>
 <br>
 <div class="left">
 <span style="font-size:0.7em" >Test by Invoking Qemu</span>
@@ -1173,7 +1173,7 @@ Note:
 @title[Lab 4: Serial port Instance of DebugLib]
 <br>
 <br>
-<p align="Left"><span class="gold" >Lab 4: Serial port Instance of `DebugLib`</span></p>
+<p align="Left"><span class="gold" ><b>Lab 4: Serial port Instance of `DebugLib`</b></span></p>
 <br>
 <div class="left1">
 <span style="font-size:0.8em" >In this lab,  you’ll change the `DebugLib` to the Serial port instance. </span>
@@ -1190,7 +1190,7 @@ To change the entire debug to Serial.log the switch “-D DEBUG_ON_SERIAL_PORT�
 
 ---
 @title[Lab 4: Using Serial port Library Instances]
-<p align="right"><span class="gold" >Lab 4: Using Serial port Library Instances</span></p>
+<p align="right"><span class="gold" ><b>Lab 4: Using Serial port Library Instances</b></span></p>
 <br>
 <span style="font-size:0.7em" >Open `~src/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
 <span style="font-size:0.7em" >Replace `SampleApp/SampleApp.inf { . . .}` with the following:</span><br>
@@ -1213,7 +1213,7 @@ Note:
 
 ---?image=/assets/images/slides/Slide67.JPG
 @title[Lab 4: Run Qemu Script]
-<p align="right"><span class="gold" >Lab 4: Run the Qemu Script</span></p>
+<p align="right"><span class="gold" ><b>Lab 4: Run the Qemu Script</b></span></p>
 <br>
 <div class="left">
 <span style="font-size:0.7em" >Test by Invoking Qemu</span>
@@ -1245,7 +1245,7 @@ Note:
 @title[Lab 5: Debugging EDK II with GDB]
 <br>
 <br>
-<p align="Left"><span class="gold" >Lab 5: Debugging EDK II with GDB</span></p>
+<p align="Left"><span class="gold" ><b>Lab 5: Debugging EDK II with GDB</b></span></p>
 <br>
 <div class="left1">
 <span style="font-size:0.8em" >In this lab,  you’ll learn how setup the Linux GDB to use with EDK II and Qemu </span><br>
@@ -1259,7 +1259,7 @@ Note:
 
 ---
 @title[Lab 5.1: Update the Qemu Script]
-<p align="right"><span class="gold" >Lab 5.1: Update the Qemu Script</span></p>
+<p align="right"><span class="gold" ><b>Lab 5.1: Update the Qemu Script</b></span></p>
 <br>
 <p style="line-height:90%"><span style="font-size:0.8em" >Edit  the Linux shell script to run the QEMU from the run-ovmf directory and add  the option for GDB “-s” to 
 generate a symbol file and also use IA32 instead of x86_64</span></p><br>
@@ -1283,7 +1283,7 @@ Note:
 
 ---
 @title[Lab 5.2: Build Ovmf for IA32]
-<p align="right"><span class="gold" >Lab 5.2: Build Ovmf for IA32</span></p>
+<p align="right"><span class="gold" ><b>Lab 5.2: Build Ovmf for IA32</b></span></p>
 <br>
 <p style="line-height:90%"><span style="font-size:0.8em">Open `~/src/edk2/OvmfPkg/OvmfPkgIa32.dsc` and add the application to the  (using IA32 )  at the end of the 
    `[Components]` section.</span></p>
@@ -1309,7 +1309,7 @@ Note:
 
 ---
 @title[Lab 5.3: Build Ovmf for IA32 03]
-<p align="right"><span class="gold" >Lab 5.3: Build Ovmf for IA32</span></p>
+<p align="right"><span class="gold" ><b>Lab 5.3: Build Ovmf for IA32</b></span></p>
 <br>
 <span style="font-size:0.8em">Copy the output of SampleApp to the `hda-contents` directory: </span>
 ```
@@ -1337,7 +1337,7 @@ Note:
 
 ---
 @title[Lab 5.4: Check debug.log ]
-<p align="right"><span class="gold" >Lab 5.4: Check debug.log</span></p>
+<p align="right"><span class="gold" ><b>Lab 5.4: Check debug.log</b></span></p>
 <br>
 <p style="line-height:90%"><span style="font-size:0.7em" >Open <font color="yellow"><b>another</b></font> Terminal(2) Prompt in the `run-ovmf` directory and check the `debug.log` file.</span></p>
 ```
@@ -1356,7 +1356,7 @@ Note:
 
 ---
 @title[Lab 5.5: Add a Debug Print]
-<p align="right"><span class="gold" >Lab 5.5: Add a Debug Print</span></p>
+<p align="right"><span class="gold" ><b>Lab 5.5: Add a Debug Print</b></span></p>
 <p style="line-height:90%"><span style="font-size:0.7em" >Add a DEBUG statement to your SampleApp.c application to get the entry point of your code. </span><br>
 <span style="font-size:0.5em" >Add the following DEBUG line just before the DEBUG statements from the previous lab:</span></p>
 ```C
@@ -1382,7 +1382,7 @@ Note:
 
 ---
 @title[Lab 5.6: Invoking GDB]
-<p align="right"><span class="gold" >Lab 5.6: Invoking GDB</span></p>
+<p align="right"><span class="gold" ><b>Lab 5.6: Invoking GDB</b></span></p>
 <span style="font-size:0.7em" >In the terminal(2) prompt Invoke GDB</span><span style="font-size:0.5em" >(note - at first there will be nothing in the source window)</span>
 ```
 bash$ cd ~/run-ovmf/hda-contents
@@ -1413,7 +1413,7 @@ Note:
 
 ---
 @title[Lab 5.7: Calculate Addresses]
-<p align="right"><span class="gold" >Lab 5.7: Calculate Addresses</span></p>
+<p align="right"><span class="gold" ><b>Lab 5.7: Calculate Addresses</b></span></p>
 <br>
 <p style="line-height:80%"><span style="font-size:0.7em" >We need to calculate our addresses for ".text" and ".data" section.</span><br>
 <span style="font-size:0.5em" > The application is loaded under `0x00006AEE000` (loading driver point - <b>NOT Entrypoint</b>) and we know text and data offsets.</span></p>
@@ -1435,7 +1435,7 @@ Note:
 
 ---
 @title[Lab 5.8: Load the Symbols for SampleApp]
-<p align="right"><span class="gold" >Lab 5.8: Load the Symbols for SampleApp</span></p>
+<p align="right"><span class="gold" ><b>Lab 5.8: Load the Symbols for SampleApp</b></span></p>
 <br>
 <p style="line-height:90%"><span style="font-size:0.7em" >Load the symbols with the fixed up address using SampleApp output .debug file using the "`add-symbol-file`" command:</span></p>
 ```
@@ -1460,7 +1460,7 @@ Note:
 
 ---
 @title[Lab 5.9: Attach GDB to QEMU]
-<p align="right"><span class="gold" >Lab 5.9: Attach GDB to QEMU</span></p>
+<p align="right"><span class="gold" ><b>Lab 5.9: Attach GDB to QEMU</b></span></p>
 
 <span style="font-size:0.7em" >Attach the GDB debugger to QEMU</span>
 
@@ -1489,7 +1489,7 @@ Note:
 
 ---?image=/assets/images/slides/Slide71.JPG
 @title[Lab 5: GBD and QEMU Windows]
-<p align="right"><span class="gold" >Lab 5: GBD and QEMU Windows</span></p>
+<p align="right"><span class="gold" ><b>Lab 5: GBD and QEMU Windows</b></span></p>
 <span style="font-size:0.7em" >The GDB window will look similar to this</span>
 
 Note:
