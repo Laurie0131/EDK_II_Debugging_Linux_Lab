@@ -84,16 +84,16 @@ Note:
 </div>
 
 Note:
-- Ways to Debug…
+- Ways to Debug . . .
 - Use DEBUG instead of Print functions in code
 - Use a software debugger (COM/USB)
 - Use a hardware debugger (JTAG/XDB)
 - Soft loading driver through UEFI shell
 - Use shell commands to test capabilities
 
-- What are some alternatives if I don’t want to use the debug lib? 
+- What are some alternatives if I don't want to use the debug lib? 
 
-- You can use print statements and soft load my driver to the shell to see what is going on. The downside is that you then have print statements in your code.  This doesn’t work really well if you want to make a release to a customer.
+- You can use print statements and soft load my driver to the shell to see what is going on. The downside is that you then have print statements in your code.  This doesn't work really well if you want to make a release to a customer.
 - You could use a software debugger, and there is a hardware debugger but if they are not available EDK II debug macro might be a good place to start.
 
 - We believe the debug lib is the simplest and cleanest way to get it all working
@@ -139,7 +139,7 @@ Note:
 - Enable/disable when compiled (target.txt)
 - Can connect a 2nd PC to capture debug messages 
 
-- The main message-- the debug lib library is portable, it’s clean, it’s very easy to use, and we believe it’s the easiest way to do debugging on a UEFI platform.
+- The main message-- the debug lib library is portable, it's clean, it's very easy to use, and we believe it's the easiest way to do debugging on a UEFI platform.
 
 - The debug lib library has the debug and assert macros. 
 - There are library instances that allow you to use a second PC to capture all messages coming out
@@ -499,7 +499,7 @@ Note:
 <ul>
   <li><span style="font-size:0.8em" >Open a Terminal Command Prompt (Cnt-Alt-T) and type cd ~/src/edk2<br></span>&nbsp;&nbsp;&nbsp;<span style="font-size:0.6em" ><span style="background-color: #101010">&nbsp;` bash$  .  edksetup.sh `&nbsp;</span> </span></li><br>
   <li><span style="font-size:0.8em" >Open `~/src/edk2/SampleApp/SampleApp.c` </span></li><br>
-  <li><span style="font-size:0.8em" >Add the following to the include statements at the top of the file after below the last “`#include`” statement: </span></li>
+  <li><span style="font-size:0.8em" >Add the following to the include statements at the top of the file after below the last "`#include`" statement: </span></li>
 <pre>
 ```
  #include <Library/DebugLib.h>
@@ -512,7 +512,7 @@ Note:
 ---
 @title[Lab 1: Add debug statements SampleApp 02]
 <p align="right"><span class="gold" ><b>Lab 1: Add debug statements to SampleApp</b></span></p>
-<p style="line-height:90%"><span style="font-size:0.7em" >Locate the `UefiMain` function. Then copy and paste the following code after the <span style="background-color: #101010">&nbsp;“`EFI_INPUT_KEY  KEY;`”</span> statement: and before the first <span style="background-color: #101010">&nbsp;`Print()` </span>statement </span></p>
+<p style="line-height:90%"><span style="font-size:0.7em" >Locate the `UefiMain` function. Then copy and paste the following code after the <span style="background-color: #101010">&nbsp;"`EFI_INPUT_KEY  KEY;`"</span> statement: and before the first <span style="background-color: #101010">&nbsp;`Print()` </span>statement </span></p>
 ```c
 DEBUG ((0xffffffff, "\n\nUEFI Base Training DEBUG DEMO\n") );
 DEBUG ((0xffffffff, "0xffffffff USING DEBUG ALL Mask Bits Set\n") );
@@ -556,7 +556,7 @@ Note:
 @title[Lab 1 Build and Test Application]
 <p align="right"><span class="gold" ><b>Lab 1: Build and Test Application</b></span></p>
 <br>
-<span style="font-size:0.8em" >Build SampleApp – Cd to ~/src/edk2 dir </span>
+<span style="font-size:0.8em" >Build SampleApp - Cd to ~/src/edk2 dir </span>
 ```shell
    bash$ build
 ```
@@ -1185,7 +1185,7 @@ Note:
 Note:
 
 The DEBUG output for SampleApp is redirected to the serial.log file. This debug library instance only applies to SampleApp and does not alter the general debug behavior of other modules.
-To change the entire debug to Serial.log the switch “-D DEBUG_ON_SERIAL_PORT” can be used with the Build command. 
+To change the entire debug to Serial.log the switch "-D DEBUG_ON_SERIAL_PORT" can be used with the Build command. 
 
 
 ---
