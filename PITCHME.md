@@ -461,14 +461,14 @@ Note:
 <p align="Left"><span class="gold" ><b>Lab 1: Adding Debug Statements</b></span></p>
 <br>
 <div class="left1">
-<span style="font-size:0.8em" >In this lab, you’ll add debug statements to the previous lab's SampleApp UEFI Shell application</span>
+<span style="font-size:0.8em" >In this lab, you'll add debug statements to the previous lab's SampleApp UEFI Shell application</span>
 </div>
 <div class="right1">
 <span style="font-size:0.8em" >&nbsp;  </span>
 </div>
 
 Note:
-In this lab, you’ll learn how to add debug statements.  
+In this lab, you'll learn how to add debug statements.  
 This lab uses code from a previous exercise as a starting point (refer to  Writing Simple UEFI Applications).  Before proceeding, verify that the SampleApp code is present in your workspace and that the code references the OvmfPkgX64.dsc file.
 
 ---
@@ -612,14 +612,14 @@ Note:
 <p align="Left"><span class="gold" ><b>Lab 2: Changing PCD Value</b></span></p>
 <br>
 <div class="left1">
-<span style="font-size:0.8em" >In this lab, you’ll  learn how to use PCD values to change debugging capabilities. </span>
+<span style="font-size:0.8em" >In this lab, you'll  learn how to use PCD values to change debugging capabilities. </span>
 </div>
 <div class="right1">
 <span style="font-size:0.8em" >&nbsp;  </span>
 </div>
 
 Note:
-In this lab, you’ll learn how to use PCD values to change debugging capabilities.  The previous lab,  Adding Debug Statements, did not display all the DEBUG messages added to SampleApp.c.  This lab shows how to change this behavior.
+In this lab, you'll learn how to use PCD values to change debugging capabilities.  The previous lab,  Adding Debug Statements, did not display all the DEBUG messages added to SampleApp.c.  This lab shows how to change this behavior.
 
 
 
@@ -1114,7 +1114,7 @@ Note:
 <p align="Left"><span class="gold" ><b>Lab 3: Library Instances for Debugging</b></span></p>
 <br>
 <div class="left1">
-<span style="font-size:0.8em" >In this lab,  you’ll learn how to add specific debug library instances. </span><br>
+<span style="font-size:0.8em" >In this lab,  you'll learn how to add specific debug library instances. </span><br>
 </div>
 <div class="right1">
 <span style="font-size:0.8em" >&nbsp;  </span>
@@ -1176,7 +1176,7 @@ Note:
 <p align="Left"><span class="gold" ><b>Lab 4: Serial port Instance of `DebugLib`</b></span></p>
 <br>
 <div class="left1">
-<span style="font-size:0.8em" >In this lab,  you’ll change the `DebugLib` to the Serial port instance. </span>
+<span style="font-size:0.8em" >In this lab,  you'll change the `DebugLib` to the Serial port instance. </span>
 </div>
 <div class="right1">
 <span style="font-size:0.8em" >&nbsp;  </span>
@@ -1248,7 +1248,7 @@ Note:
 <p align="Left"><span class="gold" ><b>Lab 5: Debugging EDK II with GDB</b></span></p>
 <br>
 <div class="left1">
-<span style="font-size:0.8em" >In this lab,  you’ll learn how setup the Linux GDB to use with EDK II and Qemu </span><br>
+<span style="font-size:0.8em" >In this lab,  you'll learn how setup the Linux GDB to use with EDK II and Qemu </span><br>
 <span style="font-size:0.7em" >See also the tianocore.org wiki page:<br> <a href="https://github.com/tianocore/tianocore.github.io/wiki/How-to-debug-OVMF-with-QEMU-using-GDB "> How to use GDB with QEMU</a>
 </div>
 <div class="right1">
