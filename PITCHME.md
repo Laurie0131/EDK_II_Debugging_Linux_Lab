@@ -13,7 +13,7 @@
 Note:
   PITCHME.md for UEFI / EDK II Training  EDK II Debugging Pres-lab
 
-  Copyright (c) 2018, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2019, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -1316,7 +1316,7 @@ Note:
 @title[Lab 5.1: Update the Qemu Script]
 <p align="right"><span class="gold" ><b>Lab 5.1: Update the Qemu Script</b></span></p>
 <br>
-<p style="line-height:90%"><span style="font-size:0.8em" >Edit  the Linux shell script to run the QEMU from the run-ovmf directory and add  the option for GDB "-s"ù to 
+<p style="line-height:90%"><span style="font-size:0.8em" >Edit  the Linux shell script to run the QEMU from the run-ovmf directory and add  the option for GDB "-s" to 
 generate a symbol file and also use IA32 instead of x86_64</span></p><br>
 ```
  bash$ cd ~/run-ovmf
