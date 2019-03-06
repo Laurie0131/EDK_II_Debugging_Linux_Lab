@@ -457,6 +457,54 @@ Note:
 - PerformanceLib -  Enable Measurement
 	- gEfiMdePkgTokenSpaceGuid.PcdPerformanceLibraryPropertyMask
 
+---
+@title[CpuBreakpoint vs CpuDeadLoop  ]
+<p align="right"><span class="gold" ><b>`CpuBreakpoint` Vs `CpuDeadLoop` </b></span></p>
+
+@snap[north-west span-45]
+<br>
+<br>
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:01.1em; font-weight: bold;" >`CpuBreakPoint`<br>&nbsp;</span></p>)
+<p align="Left" style="line-height:80%"><span style="font-size:0.8em" >When using a Software debugger: </span> </p>
+<ul style="list-style-type:disc; line-height:0.7;">
+   <li><span style="font-size:0.67em" >Visual Studio</span></li>
+   <li><span style="font-size:0.67em" >GDB (`OvmfPkg` w/ qemu)</span></li>
+   <li><span style="font-size:0.67em" >Intel<sup>&reg; </sup> UDK Debugger</span></li>
+   <li><span style="font-size:0.67em" ><a href="https://www.windriver.com/">Windriver</a> Simics</span></li>
+   <li><span style="font-size:0.67em" >Debug agent - `SourceLevelDebugPkg`</span></li>
+ </ul>
+<br>
+@snapend
+
+
+
+@snap[north-east span-45]
+<br>
+<br>
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:01.1em; font-weight: bold;" >`CpuDeadLoop`<br>&nbsp;</span></p>)
+<p align="Left" style="line-height:80%"><span style="font-size:0.8em" >When using a Hardware debugger: </span> </p>
+<ul style="list-style-type:disc; line-height:0.7;">
+   <li><span style="font-size:0.67em" >In-Target Probe(ITP)</span></li>
+   <li><span style="font-size:0.67em" >Intel<sup>&reg;</sup> SVT DCI Cable</span></li>
+   <li><span style="font-size:0.67em" >Intel<sup>&reg;</sup> SVT Closed Chassis Adapter (CCA)</span></li>
+   <li><span style="font-size:0.67em" >other 3<sup>rd</sup> party Hardware (i.e. <a href="http://www.lauterbach.com">Lauterbach</a> w/ JTAG)
+</span></li>
+</ul>
+<br>
+@snapend
+
+@snap[south-west span-100]
+<p style="line-height:70%" align="left"><span style="font-size:0.7em" >
+The functions <font color="#A8ff60">`CpuBreakpoint()`</font> and  <font color="#A8ff60">`CpuDeadLoop()`</font> are part of the EDK II Base Libraries 
+and can be compiled with any UEFI or PI Module at any phase of the boot flow (SEC, PEI, DXE, BDS, TSL)
+</span> </p>
+<br>
+@snapend
+
+
+
+Note:
+
 
 ---?image=/assets/images/slides/Slide_LabSec.JPG
 @title[Lab 1: Adding Debug Statements]
