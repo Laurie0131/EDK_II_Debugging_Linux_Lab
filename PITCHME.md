@@ -1316,7 +1316,7 @@ Note:
 @title[Lab 5.1: Update the Qemu Script]
 <p align="right"><span class="gold" ><b>Lab 5.1: Update the Qemu Script</b></span></p>
 <br>
-<p style="line-height:90%"><span style="font-size:0.8em" >Edit  the Linux shell script to run the QEMU from the run-ovmf directory and add  the option for GDB “-s” to 
+<p style="line-height:90%"><span style="font-size:0.8em" >Edit  the Linux shell script to run the QEMU from the run-ovmf directory and add  the option for GDB "-s"� to 
 generate a symbol file and also use IA32 instead of x86_64</span></p><br>
 ```
  bash$ cd ~/run-ovmf
@@ -1623,7 +1623,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWIS
 ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY 
 OF SUCH DAMAGE.
 
-Copyright (c) 2018, Intel Corporation. All rights reserved.
+Copyright (c) 2019, Intel Corporation. All rights reserved.
 **/
 
 ```
