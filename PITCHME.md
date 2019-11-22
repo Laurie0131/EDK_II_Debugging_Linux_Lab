@@ -1578,7 +1578,7 @@ UefiMain (
 	// ADD the following line
     DEBUG ((EFI_D_INFO, "My Entry point: 0x%p\r\n", (CHAR16*)UefiMain )  );
 ```
-<p style="line-height:90%"><span style="font-size:0.7em" >When you print out the debug.log again, the exact entry point for your code will show.</span><br>
+<p style="line-height:75%"><span style="font-size:0.7em" >When you print out the debug.log again, the exact entry point for your code will show.</span><br>
 <span style="font-size:0.5em" >This is useful to double check symbols are fixed up to the correct line numbers in the source file.</span></p>
 ```shell
   Loading driver at 0x00006AEE000 EntryPoint=0x00006AEE756 SampleApp.efi
@@ -1605,7 +1605,7 @@ bash$ gdb --tui
  (gdb) file SampleApp.efi
  Reading symbols from SampleApp.efi...(no debugging symbols found)...done. 
 ```
-<p style="line-height:90%"><span style="font-size:0.7em" >Check where GDB has for ".text" and ".data" offsets with "<font face="Consolas">info files</font>" command.</span></p>
+<p style="line-height:75%"><span style="font-size:0.7em" >Check where GDB has for ".text" and ".data" offsets with "<font face="Consolas">info files</font>" command.</span></p>
 ```shell
  (gdb) info files
  Symbols from "/home/u-mypc/run-ovmf/hda-contents/SampleApp.efi".
@@ -1627,8 +1627,8 @@ Note:
 @title[Lab 5.7: Calculate Addresses]
 <p align="right"><span class="gold" ><b>Lab 5.7: Calculate Addresses</b></span></p>
 <br>
-<p style="line-height:80%"><span style="font-size:0.7em" >We need to calculate our addresses for ".text" and ".data" section.</span><br>
-<span style="font-size:0.5em" > The application is loaded under <font face="Consolas">0x00006AEE000</font> (loading driver point - <b>NOT Entrypoint</b>) and we know text and data offsets.</span></p>
+<p style="line-height:70%"><span style="font-size:0.7em" >We need to calculate our addresses for ".text" and ".data" section.</span><br>
+<span style="font-size:0.55em" > The application is loaded under <font face="Consolas">0x00006AEE000</font> (loading driver point - <b>NOT Entrypoint</b>) and we know text and data offsets.</span></p>
 ```shell
  text = 0x00006AEE000  +  0x00000240 = 0x06AEE240
  data = 0x00006AEE000  +  0x00000240 + 0x000028c0 = 0x06AF0B00 
@@ -1649,7 +1649,7 @@ Note:
 @title[Lab 5.8: Load the Symbols for SampleApp]
 <p align="right"><span class="gold" ><b>Lab 5.8: Load the Symbols for SampleApp</b></span></p>
 <br>
-<p style="line-height:90%"><span style="font-size:0.7em" >Load the symbols with the fixed up address using SampleApp output .debug file using the "<font face="Consolas">add-symbol-file</font>" command:</span></p>
+<p style="line-height:75%"><span style="font-size:0.7em" >Load the symbols with the fixed up address using SampleApp output .debug file using the "<font face="Consolas">add-symbol-file</font>" command:</span></p>
 ```shell
 (gdb) add-symbol-file SampleApp.debug 0x06AEE240 -s .data 0x06AF0B00 
 add symbol table from file "SampleApp.debug" at
@@ -1691,7 +1691,7 @@ Continuing.
 ```shell
 Fs0:\> SampleApp.efi
 ```
-<p style="line-height:80%"><span style="font-size:0.7em" >The GDB will hit your break point in your UEFI application's entry point and you can begin to debug with source code debugging.</span></p>
+<p style="line-height:75%"><span style="font-size:0.7em" >The GDB will hit your break point in your UEFI application's entry point and you can begin to debug with source code debugging.</span></p>
 
 
 Note:
