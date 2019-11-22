@@ -1475,7 +1475,7 @@ Note:
 <br>
 <p style="line-height:90%"><span style="font-size:0.8em" >Edit  the Linux shell script to run the QEMU from the run-ovmf directory and add  the option for GDB "@color[yellow](-s)" to 
 generate a symbol file and also use IA32 instead of x86_64</span></p><br>
-```
+```shell
  bash$ cd ~/run-ovmf
  bash$ gedit RunQemu.sh
 ```
@@ -1505,12 +1505,12 @@ Note:
     SampleApp/SampleApp.inf
 ```
 <span style="font-size:0.8em">Build OVMF for IA32 :  </span>
-```
+```shell
 bash$ build -a IA32 -p OvmfPkg/OvmfPkgIa32.dsc
 ```
 
 <span style="font-size:0.8em">Copy the the OVMF.fd to the run-ovmf directory renaming it bios.bin: </span>
-```
+```shell
 bash$ cd ~/run-ovmf/
 bash$ cp ~/src/edk2-ws/Build/OvmfIa32/DEBUG_GCC5/FV/OVMF.fd  bios.bin
 ```
@@ -1524,18 +1524,18 @@ Note:
 <p align="right"><span class="gold" ><b>Lab 5.3: Build Ovmf for IA32</b></span></p>
 <br>
 <span style="font-size:0.8em">Copy the output of SampleApp to the <font face="Consolas">hda-contents</font> directory: </span>
-```
+```shell
 bash$ cd ~/run-ovmf/hda-contents
 bash$ cp ~/src/edk2-ws/Build/OvmfIa32/DEBUG_GCC5/IA32/SampleApp  .
 ```
 <span style="font-size:0.8em">The following will be in the <font face="Consolas">~/run-ovmf/hda-contents/</font></span>
-```
+```shell
    SampleApp.efi
    SampleApp.debug
    SampleApp (Directory)
 ```
 <span style="font-size:0.7em" >Open a Terminal(1) Prompt and Invoke Qemu</span>
-```
+```shell
 bash$ cd ~/run-ovmf
 bash$ . RunQemu.sh
 ```
@@ -1552,7 +1552,7 @@ Note:
 <p align="right"><span class="gold" ><b>Lab 5.4: Check debug.log</b></span></p>
 <br>
 <p style="line-height:90%"><span style="font-size:0.7em" >Open <font color="yellow"><b>another</b></font> Terminal(2) Prompt in the <font face="Consolas">run-ovmf</font> directory and check the <font face="Consolas">debug.log</font> file.</span></p>
-```
+```shell
 bash$ cd ~/run-ovmf
 bash$ cat debug.log
 ```
@@ -1580,7 +1580,7 @@ UefiMain (
 ```
 <p style="line-height:90%"><span style="font-size:0.7em" >When you print out the debug.log again, the exact entry point for your code will show.</span><br>
 <span style="font-size:0.5em" >This is useful to double check symbols are fixed up to the correct line numbers in the source file.</span></p>
-```
+```shell
   Loading driver at 0x00006AEE000 EntryPoint=0x00006AEE756 SampleApp.efi
   InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 6F0FF10
   ProtectUefiImageCommon - 0x6F0F028
@@ -1596,17 +1596,17 @@ Note:
 @title[Lab 5.6: Invoking GDB]
 <p align="right"><span class="gold" ><b>Lab 5.6: Invoking GDB</b></span></p>
 <span style="font-size:0.7em" >In the terminal(2) prompt Invoke GDB</span><span style="font-size:0.5em" >(note - at first there will be nothing in the source window)</span>
-```
+```shell
 bash$ cd ~/run-ovmf/hda-contents
 bash$ gdb --tui 
 ```
 <span style="font-size:0.7em" >Load your UEFI Application SampleApp.efi with the "<font face="Consolas">file</font>" command.</span>
-```
+```shell
  (gdb) file SampleApp.efi
  Reading symbols from SampleApp.efi...(no debugging symbols found)...done. 
 ```
 <p style="line-height:90%"><span style="font-size:0.7em" >Check where GDB has for ".text" and ".data" offsets with "<font face="Consolas">info files</font>" command.</span></p>
-```
+```shell
  (gdb) info files
  Symbols from "/home/u-mypc/run-ovmf/hda-contents/SampleApp.efi".
  Local exec file:
@@ -1629,12 +1629,12 @@ Note:
 <br>
 <p style="line-height:80%"><span style="font-size:0.7em" >We need to calculate our addresses for ".text" and ".data" section.</span><br>
 <span style="font-size:0.5em" > The application is loaded under <font face="Consolas">0x00006AEE000</font> (loading driver point - <b>NOT Entrypoint</b>) and we know text and data offsets.</span></p>
-```
+```shell
  text = 0x00006AEE000  +  0x00000240 = 0x06AEE240
  data = 0x00006AEE000  +  0x00000240 + 0x000028c0 = 0x06AF0B00 
 ```
 <span style="font-size:0.7em" >Unload the .efi file</span>
-```
+```shell
 (gdb) file
 No executable file now.
 No symbol file now.
@@ -1650,7 +1650,7 @@ Note:
 <p align="right"><span class="gold" ><b>Lab 5.8: Load the Symbols for SampleApp</b></span></p>
 <br>
 <p style="line-height:90%"><span style="font-size:0.7em" >Load the symbols with the fixed up address using SampleApp output .debug file using the "<font face="Consolas">add-symbol-file</font>" command:</span></p>
-```
+```shell
 (gdb) add-symbol-file SampleApp.debug 0x06AEE240 -s .data 0x06AF0B00 
 add symbol table from file "SampleApp.debug" at
 
@@ -1660,7 +1660,7 @@ add symbol table from file "SampleApp.debug" at
 Reading symbols from SampleApp.debug...done.
 ```
 <span style="font-size:0.7em" >Set a break point at UefiMain</span>
-```
+```shell
 (gdb) break UefiMain
 Breakpoint 1 at 0x6aee496: file /home/u-uefi/src/edk2-ws/edk2/SampleApp/SampleApp.c, line 40.
 ```
@@ -1677,18 +1677,18 @@ Note:
 <span style="font-size:0.7em" >Attach the GDB debugger to QEMU</span>
 
 
-```
+```shell
 (gdb) target remote localhost:1234
 Remote debugging using localhost:1234
 0x07df6ba4 in ?? ()
 ```
 <span style="font-size:0.7em" >Continue in GDB</span>
-```
+```shell
 (gdb) c
 Continuing.
 ```
 <span style="font-size:0.7em" >In the QEMU Window Invoke your application again</span>
-```
+```shell
 Fs0:\> SampleApp.efi
 ```
 <p style="line-height:80%"><span style="font-size:0.7em" >The GDB will hit your break point in your UEFI application's entry point and you can begin to debug with source code debugging.</span></p>
