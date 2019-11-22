@@ -702,7 +702,7 @@ Note:
 <p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br></span></p>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
 
-<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br></span></p>
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br></span></p>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
 
 @snapend
@@ -724,7 +724,7 @@ Run the application from the shell<br>
 </span></p>
 
 
-<p style="line-height:70%"  align="left"><span style="font-size:0.7em" >Check the contents of the debug.log file <br>&nbsp;&nbsp;
+<p style="line-height:70%"  align="left"><span style="font-size:0.7em" >Check the contents of the debug.log file <br><br>&nbsp;&nbsp;
 <font face="Consolas">@size[.7em](  bash$ cat debug.log)</font><br><br>
   
 <font color="yellow">Exit QEMU</font>
