@@ -1473,17 +1473,17 @@ Note:
 @title[Lab 5.1: Update the Qemu Script]
 <p align="right"><span class="gold" ><b>Lab 5.1: Update the Qemu Script</b></span></p>
 <br>
-<p style="line-height:90%"><span style="font-size:0.8em" >Edit  the Linux shell script to run the QEMU from the run-ovmf directory and add  the option for GDB "@color[yellow](-s)" to 
-generate a symbol file and also use IA32 instead of x86_64</span></p><br>
+<p style="line-height:75%"><span style="font-size:0.78em" >Edit  the Linux shell script to run the QEMU from the run-ovmf directory and add  the option for GDB "@color[yellow](-s)" to 
+generate a symbol file and also use IA32 instead of x86_64</span></p>
 ```shell
  bash$ cd ~/run-ovmf
  bash$ gedit RunQemu.sh
 ```
-<span style="font-size:0.8em" > Add the following to RunQemu.sh</span></span>
+<span style="font-size:0.78em" > Add the following to RunQemu.sh</span></span>
 ```shell
   qemu-system-i386 -s  -pflash bios.bin -hda fat:rw:hda-contents -net none -debugcon file:debug.log -global isa-debugcon.iobase=0x402 
 ```
-<span style="font-size:0.8em" >Save and Exit</span>
+<span style="font-size:0.78em" >Save and Exit</span>
 
 Note:
 - Lab 5.1
@@ -1497,8 +1497,8 @@ Note:
 @title[Lab 5.2: Build Ovmf for IA32]
 <p align="right"><span class="gold" ><b>Lab 5.2: Build Ovmf for IA32</b></span></p>
 <br>
-<p style="line-height:90%"><span style="font-size:0.8em">Open <font face="Consolas">~/src/edk2-ws/edk2/OvmfPkg/OvmfPkgIa32.dsc</font> and add the application to the  (using IA32 )  at the end of the 
-   <font face="Consolas">[Components]</font> section.</span></p>
+<p style="line-height:75%"><span style="font-size:0.78em">Open <font face="Consolas">@size[.8em](~/src/edk2-ws/edk2/OvmfPkg/OvmfPkgIa32.dsc)</font> and add the application to the  (using IA32 )  at the end of the 
+   <font face="Consolas">@size[.8em]([Components])</font> section.</span></p>
 ```php
   [Components]
    #  add at the end of the components section OvmfPkgIa32.dsc
@@ -1551,7 +1551,7 @@ Note:
 @title[Lab 5.4: Check debug.log ]
 <p align="right"><span class="gold" ><b>Lab 5.4: Check debug.log</b></span></p>
 <br>
-<p style="line-height:90%"><span style="font-size:0.7em" >Open <font color="yellow"><b>another</b></font> Terminal(2) Prompt in the <font face="Consolas">run-ovmf</font> directory and check the <font face="Consolas">debug.log</font> file.</span></p>
+<p style="line-height:75%"><span style="font-size:0.7em" >Open <font color="yellow"><b>another</b></font> Terminal(2) Prompt in the <font face="Consolas">run-ovmf</font> directory and check the <font face="Consolas">debug.log</font> file.</span></p>
 ```shell
 bash$ cd ~/run-ovmf
 bash$ cat debug.log
@@ -1569,7 +1569,7 @@ Note:
 ---
 @title[Lab 5.5: Add a Debug Print]
 <p align="right"><span class="gold" ><b>Lab 5.5: Add a Debug Print</b></span></p>
-<p style="line-height:90%"><span style="font-size:0.7em" >Add a DEBUG statement to your SampleApp.c application to get the entry point of your code. </span><br>
+<p style="line-height:75%"><span style="font-size:0.7em" >Add a DEBUG statement to your SampleApp.c application to get the entry point of your code. </span><br>
 <span style="font-size:0.5em" >Add the following DEBUG line just before the DEBUG statements from the previous lab:</span></p>
 ```C
 UefiMain (
