@@ -49,12 +49,12 @@ Note:
 <!---  Add bullets using https://fontawesome.com/cheatsheet certificate
 -->
 <ul style="list-style-type:none">
- <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Define `DebugLib` and its attributes</span> </li>
+ <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Define <font face="Consolas">DebugLib</font> and its attributes</span> </li>
  <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;List the ways to debug</span></li>
- <li>@fa[certificate gp-bullet-gold]<span style="font-size:0.9em">&nbsp;&nbsp;Using PCDs to Configure `DebugLib` -LAB </span> </li>
+ <li>@fa[certificate gp-bullet-gold]<span style="font-size:0.9em">&nbsp;&nbsp;Using PCDs to Configure <font face="Consolas">DebugLib</font> -LAB </span> </li>
  <li>@fa[certificate gp-bullet-ltgreen]<span style="font-size:0.9em">&nbsp;&nbsp;Change Compiler & Linker Flags for debugging</span></li>
- <li>@fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Change the `DebugLib` instance to modify the debug<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output - LAB</span> </li>
- <li>@fa[certificate gp-bullet-magenta]<span style="font-size:0.9em">&nbsp;&nbsp;Debug EDK II using GDB - LAB</span> </li>
+ <li>@fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Change the <font face="Consolas">DebugLib</font> instance to modify the debug<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output - LAB</span> </li>
+ <li>@fa[certificate gp-bullet-magenta]<span style="font-size:0.9em">&nbsp;&nbsp;Debug EDK II using VS Debugger - LAB</span> </li>
 </ul>
 
 ---?image=assets/images/binary-strings-black2.jpg
@@ -73,8 +73,8 @@ Note:
 
 <div class="left1">
 @ul[no-bullet]
-- <span style="font-size:0.9em" ><font color="white">`DEBUG` and `ASSERT` macros in EDK II code </font></span><br><br>
-- <span style="font-size:0.9em" ><font color="cyan">`DEBUG` instead of `Print` functions </font></span><br><br>
+- <span style="font-size:0.9em" ><font color="white"><font face="Consolas">DEBUG and ASSERT</font> macros in EDK II code </font></span><br><br>
+- <span style="font-size:0.9em" ><font color="cyan"><font face="Consolas">DEBUG</font> instead of <font face="Consolas">Print</font> functions </font></span><br><br>
 - <span style="font-size:0.9em" ><font color="white">Software/hardware debuggers </font></span><br><br>
 - <span style="font-size:0.9em" ><font color="cyan">Shell commands to test capabilities for simple debugging </font></span>
 @ulend
@@ -98,9 +98,11 @@ Note:
 
 - We believe the debug lib is the simplest and cleanest way to get it all working
 
+
 ---
 @title[EDK II DebugLib Library]
-<p align="center"><span style="font-size:01.1em" ><font color="#e49436" ><b>EDK II `DebugLib` Library</b></font></span></p>
+<p align="center"><span style="font-size:01.1em" ><font color="#e49436" ><b>EDK II <font face="Consolas">DebugLib</font> Library</b></font></span></p>
+
 @snap[north-west span-60 fragment]
 <br>
 <br>
@@ -133,6 +135,10 @@ Note:
 @snapend
 
 
+
+
+
+
 Note:
 - DebugLib library is clean & very portable
 - Using DEBUG and ASSERT macros in code
@@ -146,6 +152,8 @@ Note:
 
 
 
+
+
 ---?image=assets/images/binary-strings-black2.jpg
 @title[Debugging with PCDs]
 <br><br><br><br><br><br><br>
@@ -154,10 +162,9 @@ Note:
 
 Note:
 
-
 ---
 @title[Using PCDs to Configure DebugLib]
-<p align="right"><span class="gold" ><b>Using PCDs to Configure `DebugLib`</b></span></p>
+<p align="right"><span class="gold" ><b>Using PCDs to Configure <font face="Consolas">DebugLib</font></b></span></p>
 
 @snap[west span-100 ]
 <br>
@@ -169,7 +176,7 @@ Note:
 <br>
 <br>
 <br>
-<p style="line-height:70%" ><span style="font-size:01.0em; font-weight: bold;" ><font color="#87E2A9">MdePkg Debug Library Class </font><br></span></p>
+<p style="line-height:70%" ><span style="font-size:01.0em; font-weight: bold;" ><font color="#A8ff60">MdePkg Debug Library Class </font><br></span></p>
 <br>
 <p style="line-height:60%" align="left"><span style="font-size:0.60em; font-family:Consolas; " >
 &nbsp;&nbsp;
@@ -197,7 +204,7 @@ Note:
     - Types of messages produced
 	
 - PCDs set which drivers report errors and change what messages get printed
-- Example from Nt32Pkg.dsc:
+- Example from EmulatorPkg.dsc:
   - [PcdsFixedAtBuild.IA32]
     - EfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask|0x1f
     - gEfiMdePkgTokenSpaceGuid.PcdDebugPrintErrorLevel|0x80000040
@@ -217,7 +224,7 @@ Note:
 
 ---
 @title[PcdDebugPropertyMask Values]
-<p align="right"><span class="gold" ><b>@color[white](`PcdDebugPropertyMask`) Values</b></span></p>
+<p align="right"><span class="gold" ><b>@color[white](<font face="Consolas">PcdDebugPropertyMask</font>) Values</b></span></p>
 
 
 @snap[north-west span-100 ]
@@ -230,7 +237,7 @@ Note:
 @snap[north-west span-100 ]
 <br>
 <br>
-<p style="line-height:70%" ><span style="font-size:01.0em;" ><font color="#87E2A9"><b>Debugging Features Enabled </b></font><br></span></p>
+<p style="line-height:70%" ><span style="font-size:01.0em;" ><font color="#A8ff60"><b>Debugging Features Enabled </b></font><br></span></p>
 <p style="line-height:60%" align="left"><span style="font-size:0.550em; font-family:Consolas; " >
 &nbsp;&nbsp;
 &nbsp;&nbsp;&num;define DEBUG_PROPERTY_DEBUG_ASSERT_ENABLED &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            0x01<br>&nbsp;&nbsp;
@@ -241,7 +248,7 @@ Note:
 &nbsp;&nbsp;&num;define DEBUG_PROPERTY_ASSERT_DEADLOOP_ENABLED &nbsp;&nbsp;&nbsp;              0x20
 </span></p>
 
-<p style="line-height:60%" align="left"><span style="font-size:0.50em;"> <font color="yellow">Default value in `OvmfPkg` is `0x2f`<br>Default value in `Nt32Pkg` is `0x1f`</font></span></p>
+<p style="line-height:60%" align="left"><span style="font-size:0.50em;"> <font color="yellow">Default value in <font face="Consolas">OvmfPkg</font> is <font face="Consolas">0x2f</font><br>Default value in <font face="Consolas">EmulatorPkg</font> is <font face="Consolas">0x1f</font></font></span></p>
 @snapend
 
 
@@ -294,8 +301,8 @@ Note:
 
 ---
 @title[PcdDebugPrintErrorLevel Values]
-<p align="right"><span class="gold" ><b>@color[white](`PcdDebugPrintErrorLevel`) Values</b></span></p>
-<p style="line-height:70%" ><span style="font-size:01.0em;" ><font color="#87E2A9"><b>Debugging Messages Displayed</b></font><br></span></p>
+<p align="right"><span class="gold" ><b>@color[white](<font face="Consolas">PcdDebugPrintErrorLevel</font>) Values</b></span></p>
+<p style="line-height:70%" ><span style="font-size:01.0em;" ><font color="#A8ff60"><b>Debugging Messages Displayed</b></font><br></span></p>
 
 ```
  #define DEBUG_INIT      0x00000001  // Initialization
@@ -324,7 +331,7 @@ Note:
 ```
 
 <p style="line-height:60%" align="left"><span style="font-size:0.50em;"> <font color="yellow">
-Default value in `OvmfPkg` is `0x8000004f`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Default value in `Nt32Pkg` is `0x80000040`</font></span></p>
+Default value in <font face="Consolas">OvmfPkg is 0x8000004f</font>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Default value in <font face="Consolas">EmulatorPkg is 0x80000040</font></font></span></p>
 
 
 
@@ -400,12 +407,8 @@ Note:
 @snap[north-west span-90 fragment]
 <br>
 <br>
-@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" >`ReportStatusCodeLib` - Progress codes<br>&nbsp;</span></p>)
-<pre>
-```
-  gEfiMdePkgTokenSpaceGuid.PcdReportStatusCodePropertyMask
-```
-</pre>
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" ><font face="Consolas">ReportStatusCodeLib</font> - Progress codes<br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;" >&nbsp;&nbsp;gEfiMdePkgTokenSpaceGuid.PcdReportStatusCodePropertyMask&nbsp;</span></p>)
 <br>
 @snapend
 
@@ -415,13 +418,8 @@ Note:
 <br>
 <br>
 <p style="line-height:50%" ><br><br><br><br>&nbsp;</p>
-@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" >`PostCodeLib` - Enable Post codes<br>&nbsp;</span></p>)
-<pre>
-```
-  gEfiMdePkgTokenSpaceGuid.PcdPostCodePropertyMask
-
-```
-</pre>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" ><font face="Consolas">PostCodeLib</font> - Enable Post codes<br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:45%" align="left" ><span style="font-size:0.45em; font-family:Consolas;" >&nbsp;&nbsp;gEfiMdePkgTokenSpaceGuid.PcdPostCodePropertyMask &nbsp;</span></p>)
 <br>
 @snapend
 
@@ -435,13 +433,8 @@ Note:
 <br>
 <br>
 <p style="line-height:50%" ><br><br><br><br><br>&nbsp;</p>
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" >`PerformanceLib` - Enable Measurement <br>&nbsp;</span></p>)
-<pre>
-```
-  gEfiMdePkgTokenSpaceGuid.PcdPerformanceLibraryPropertyMask
-
-```
-</pre>
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" ><font face="Consolas">PerformanceLib</font> - Enable Measurement <br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:45%" align="left"><span style="font-size:0.45em; font-family:Consolas;" >&nbsp;&nbsp;gEfiMdePkgTokenSpaceGuid.PcdPerformanceLibraryPropertyMask &nbsp;</span></p>)
 <br>
 @snapend
 
@@ -456,54 +449,6 @@ Note:
 	- gEfiMdePkgTokenSpaceGuid.PcdPostCodePropertyMask
 - PerformanceLib -  Enable Measurement
 	- gEfiMdePkgTokenSpaceGuid.PcdPerformanceLibraryPropertyMask
-
----
-@title[CpuBreakpoint vs CpuDeadLoop  ]
-<p align="right"><span class="gold" ><b>`CpuBreakpoint` Vs `CpuDeadLoop` </b></span></p>
-
-@snap[north-west span-45]
-<br>
-<br>
-@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:01.1em; font-weight: bold;" >`CpuBreakPoint`<br>&nbsp;</span></p>)
-<p align="Left" style="line-height:80%"><span style="font-size:0.8em" >When using a Software debugger: </span> </p>
-<ul style="list-style-type:disc; line-height:0.7;">
-   <li><span style="font-size:0.67em" >Visual Studio</span></li>
-   <li><span style="font-size:0.67em" >GDB (`OvmfPkg` w/ qemu)</span></li>
-   <li><span style="font-size:0.67em" >Intel<sup>&reg; </sup> UDK Debugger</span></li>
-   <li><span style="font-size:0.67em" ><a href="https://www.windriver.com/">Windriver</a> Simics</span></li>
-   <li><span style="font-size:0.67em" >Debug agent - `SourceLevelDebugPkg`</span></li>
- </ul>
-<br>
-@snapend
-
-
-
-@snap[north-east span-45]
-<br>
-<br>
-@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:70%" ><span style="font-size:01.1em; font-weight: bold;" >`CpuDeadLoop`<br>&nbsp;</span></p>)
-<p align="Left" style="line-height:80%"><span style="font-size:0.8em" >When using a Hardware debugger: </span> </p>
-<ul style="list-style-type:disc; line-height:0.7;">
-   <li><span style="font-size:0.67em" >In-Target Probe(ITP)</span></li>
-   <li><span style="font-size:0.67em" >Intel<sup>&reg;</sup> SVT DCI Cable</span></li>
-   <li><span style="font-size:0.67em" >Intel<sup>&reg;</sup> SVT Closed Chassis Adapter (CCA)</span></li>
-   <li><span style="font-size:0.67em" >other 3<sup>rd</sup> party Hardware (i.e. <a href="http://www.lauterbach.com">Lauterbach</a> w/ JTAG)
-</span></li>
-</ul>
-<br>
-@snapend
-
-@snap[south-west span-100]
-<p style="line-height:70%" align="left"><span style="font-size:0.7em" >
-The functions <font color="#A8ff60">`CpuBreakpoint()`</font> and  <font color="#A8ff60">`CpuDeadLoop()`</font> are part of the EDK II Base Libraries 
-and can be compiled with any UEFI or PI Module at any phase of the boot flow (SEC, PEI, DXE, BDS, TSL)
-</span> </p>
-<br>
-@snapend
-
-
-
-Note:
 
 
 ---?image=/assets/images/slides/Slide_LabSec.JPG
@@ -526,21 +471,46 @@ This lab uses code from a previous exercise as a starting point (refer to  Writi
 ---
 @title[Lab 1: Catch Up SampleApp]
 <p align="right"><span class="gold" ><b>Lab 1: Catch up from previous lab</b></span></p>
+@snap[north-west span-60 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br>&nbsp;</span></p>)
+@snapend
+
 <span style="font-size:0.8em" >Skip if Lab <a href="https://gitpitch.com/tianocore-training/Writing_UEFI_App_Lab/master#/">Writing UEFI App Lab</a> completed</span>
 <ul>
-   <li><span style="font-size:0.8em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_LAB/master#/">Lab Setup</a> from previous Labs  </span></li>
-   <li><span style="font-size:0.8em" >Create a Directory under the workspace `~/src/edk2` : "`SampleApp`"</span></li>
-   <li><span style="font-size:0.8em" >Copy contents of `~/FW/LabSampleCode/SampleAppDebug` to `~/src/edk2/SampleApp`</span></li>
-   <li><span style="font-size:0.8em" >Open `~src/edk2/OvmfPkg/OvmfPkgX64.dsc`</span></li>
-   <li><span style="font-size:0.8em" >Add the following to the `[Components]` section: </span></li>
-<pre lang="php">
-```
-    # Add new modules here
-    SampleApp/SampleApp.inf
-```
-</pre>
-   <li><span style="font-size:0.8em" >Save and close the file `~src/edk2/OvmfPkg/OvmfPkgX64.dsc`  </span></li>
+   <li><span style="font-size:0.8em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_Linux_Ovmf_Lab/master#/">Lab Setup</a> from previous Labs  </span></li>
+   <li><span style="font-size:0.8em" >Create a Directory under the workspace <font face="Consolas">@size[.8em](~/src/edk2-ws/edk2 : "SampleApp")</font></span></li>
+   <li><span style="font-size:0.8em" >Copy contents of <font face="Consolas">@size[.8em](~/FW/LabSampleCode/SampleAppDebug to ~/src/edk2-ws/edk2/SampleApp)</font></span></li>
+   <li><span style="font-size:0.8em" >Open <font face="Consolas">@size[.8em](~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc)</font></span></li>
+   <li><span style="font-size:0.78em" >Add the following to the <font face="Consolas">[Components]</font> section: </span></li><br><br><br><br><br>
+   <li><span style="font-size:0.78em" >Save and close the file <font face="Consolas">@size[.8em](C:/FW/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc)</font>  </span></li>
 </ul>
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><br><br><br>
+&num; Add new modules here<br> &nbsp;
+SampleApp/SampleApp.inf
+</span></p>
+@snapend
+
 
 Note:
 
@@ -550,7 +520,7 @@ Note:
 <br>
 <ul>
   <li><span style="font-size:0.8em" >Open a Terminal Command Prompt (Cnt-Alt-T) and type cd ~/src/edk2<br></span>&nbsp;&nbsp;&nbsp;<span style="font-size:0.6em" ><span style="background-color: #101010">&nbsp;` bash$  .  edksetup.sh `&nbsp;</span> </span></li><br>
-  <li><span style="font-size:0.8em" >Open `~/src/edk2/SampleApp/SampleApp.c` </span></li><br>
+  <li><span style="font-size:0.8em" >Open `~/src/edk2-ws/edk2/SampleApp/SampleApp.c` </span></li><br>
   <li><span style="font-size:0.8em" >Add the following to the include statements at the top of the file after below the last "`#include`" statement: </span></li>
 <pre>
 ```
@@ -618,13 +588,13 @@ Note:
 <span style="font-size:0.8em" >Copy  the OVMF.fd to the run-ovmf directory naming it bios.bin</span>
 ```shell
  bash$ cd ~/run-ovmf
- bash$ cp cp ~/src/edk2/Build/OvmfX64/DEBUG_GCC5/FV/OVMF.fd bios.bin
+ bash$ cp cp ~/src/edk2-ws/Build/OvmfX64/DEBUG_GCC5/FV/OVMF.fd bios.bin
 ```
 
 <span style="font-size:0.8em" >Copy  SampleApp.efi to hda-contents</span>
 ```shell
  bash$ cd ~/run-ovmf/hda-contents
- bash$ cp ~/src/edk2/Build/OvmfX64/DEBUG_GCC5/X64/SampleApp.efi .
+ bash$ cp ~/src/edk2-ws/Build/OvmfX64/DEBUG_GCC5/X64/SampleApp.efi .
 ```
 
 Note:
@@ -683,7 +653,7 @@ In this lab, you'll learn how to use PCD values to change debugging capabilities
 @title[Lab 2: Change PCDs for SampleApp]
 <p align="right"><span class="gold" ><b>Lab 2: Change PCDs for SampleApp</b></span></p>
 <br>
-<span style="font-size:0.7em" >Open `~src/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
+<span style="font-size:0.7em" >Open `~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
 <span style="font-size:0.7em" >Replace `SampleApp/SampleApp.inf` with the following:</span><br>
 ```c
   SampleApp/SampleApp.inf {
@@ -692,12 +662,12 @@ In this lab, you'll learn how to use PCD values to change debugging capabilities
       gEfiMdePkgTokenSpaceGuid.PcdDebugPrintErrorLevel|0xffffffff
  }
 ```
-<span style="font-size:0.7em" >Save and close `~src/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
+<span style="font-size:0.7em" >Save and close `~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
 <span style="font-size:0.7em" >Build SampleApp : </span><span style="font-size:0.5em" ><span style="background-color: #000000">&nbsp;&nbsp;`bash$ build`&nbsp;&nbsp;</span></span><br>
 <span style="font-size:0.7em" >Copy  SampleApp.efi to hda-contents</span>
 ```shell
  bash$ cd ~/run-ovmf/hda-contents
- bash$ cp ~/src/edk2/Build/OvmfX64/DEBUG_GCC5/X64/SampleApp.efi .
+ bash$ cp ~/src/edk2-ws/Build/OvmfX64/DEBUG_GCC5/X64/SampleApp.efi .
 ```
 
 Note:
@@ -1182,7 +1152,7 @@ Note:
 @title[Lab 3: Using Library Instances for Debugging]
 <p align="right"><span class="gold" ><b>Lab 3: Using Library Instances for Debugging</b></span></p>
 <br>
-<span style="font-size:0.7em" >Open `~src/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
+<span style="font-size:0.7em" >Open `~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
 <span style="font-size:0.7em" >Replace `SampleApp/SampleApp.inf { . . .}` with the following:</span><br>
 ```c
   SampleApp/SampleApp.inf {
@@ -1190,12 +1160,12 @@ Note:
     DebugLib|MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut.inf
  }
 ```
-<span style="font-size:0.7em" >Save and close `~src/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
+<span style="font-size:0.7em" >Save and close `~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
 <span style="font-size:0.7em" >Build SampleApp : </span><span style="font-size:0.5em" ><span style="background-color: #000000">&nbsp;&nbsp;`bash$ build`&nbsp;&nbsp;</span></span><br>
 <span style="font-size:0.7em" >Copy  SampleApp.efi to hda-contents</span>
 ```shell
  bash$ cd ~/run-ovmf/hda-contents
- bash$ cp ~/src/edk2/Build/OvmfX64/DEBUG_GCC5/X64/SampleApp.efi .
+ bash$ cp ~/src/edk2-ws/Build/OvmfX64/DEBUG_GCC5/X64/SampleApp.efi .
 ```
 
 Note:
@@ -1247,7 +1217,7 @@ To change the entire debug to Serial.log the switch "-D DEBUG_ON_SERIAL_PORT" ca
 @title[Lab 4: Using Serial port Library Instances]
 <p align="right"><span class="gold" ><b>Lab 4: Using Serial port Library Instances</b></span></p>
 <br>
-<span style="font-size:0.7em" >Open `~src/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
+<span style="font-size:0.7em" >Open `~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
 <span style="font-size:0.7em" >Replace `SampleApp/SampleApp.inf { . . .}` with the following:</span><br>
 ```c
   SampleApp/SampleApp.inf {
@@ -1255,12 +1225,12 @@ To change the entire debug to Serial.log the switch "-D DEBUG_ON_SERIAL_PORT" ca
       DebugLib|MdePkg/Library/BaseDebugLibSerialPort/BaseDebugLibSerialPort.inf
  }
 ```
-<span style="font-size:0.7em" >Save and close `~src/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
+<span style="font-size:0.7em" >Save and close `~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
 <span style="font-size:0.7em" >Build SampleApp : </span><span style="font-size:0.5em" ><span style="background-color: #000000">&nbsp;&nbsp;`bash$ build`&nbsp;&nbsp;</span></span><br>
 <span style="font-size:0.7em" >Copy  SampleApp.efi to hda-contents</span>
 ```shell
  bash$ cd ~/run-ovmf/hda-contents
- bash$ cp ~/src/edk2/Build/OvmfX64/DEBUG_GCC5/X64/SampleApp.efi .
+ bash$ cp ~/src/edk2-ws/Build/OvmfX64/DEBUG_GCC5/X64/SampleApp.efi .
 ```
 
 Note:
@@ -1340,7 +1310,7 @@ Note:
 @title[Lab 5.2: Build Ovmf for IA32]
 <p align="right"><span class="gold" ><b>Lab 5.2: Build Ovmf for IA32</b></span></p>
 <br>
-<p style="line-height:90%"><span style="font-size:0.8em">Open `~/src/edk2/OvmfPkg/OvmfPkgIa32.dsc` and add the application to the  (using IA32 )  at the end of the 
+<p style="line-height:90%"><span style="font-size:0.8em">Open `~/src/edk2-ws/edk2/OvmfPkg/OvmfPkgIa32.dsc` and add the application to the  (using IA32 )  at the end of the 
    `[Components]` section.</span></p>
 ```php
   [Components]
@@ -1355,7 +1325,7 @@ bash$ build -a IA32 -p OvmfPkg/OvmfPkgIa32.dsc
 <span style="font-size:0.8em">Copy the the OVMF.fd to the run-ovmf directory renaming it bios.bin: </span>
 ```
 bash$ cd ~/run-ovmf/
-bash$ cp ~/src/edk2/Build/OvmfIa32/DEBUG_GCC5/FV/OVMF.fd  bios.bin
+bash$ cp ~/src/edk2-ws/Build/OvmfIa32/DEBUG_GCC5/FV/OVMF.fd  bios.bin
 ```
 
 
@@ -1369,7 +1339,7 @@ Note:
 <span style="font-size:0.8em">Copy the output of SampleApp to the `hda-contents` directory: </span>
 ```
 bash$ cd ~/run-ovmf/hda-contents
-bash$ cp ~/src/edk2/Build/OvmfIa32/DEBUG_GCC5/IA32/SampleApp  .
+bash$ cp ~/src/edk2-ws/Build/OvmfIa32/DEBUG_GCC5/IA32/SampleApp  .
 ```
 <span style="font-size:0.8em">The following will be in the `~/run-ovmf/hda-contents/`</span>
 ```
@@ -1505,7 +1475,7 @@ Reading symbols from SampleApp.debug...done.
 <span style="font-size:0.7em" >Set a break point at UefiMain</span>
 ```
 (gdb) break UefiMain
-Breakpoint 1 at 0x6aee496: file /home/u-uefi/src/edk2/SampleApp/SampleApp.c, line 40.
+Breakpoint 1 at 0x6aee496: file /home/u-uefi/src/edk2-ws/edk2/SampleApp/SampleApp.c, line 40.
 ```
 
 Note:
