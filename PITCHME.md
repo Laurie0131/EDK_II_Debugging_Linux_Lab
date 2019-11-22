@@ -720,7 +720,7 @@ Note:
 <p style="line-height:70%"  align="left"><span style="font-size:0.7em" ><br>
 Run the application from the shell<br>
 &nbsp;&nbsp;
-<font face="Consolas">@size[.7em](@color[yellow](Shell&gt;) &nbsp;SampleApp)</font>&nbsp;<br>
+<font face="Consolas">@size[.7em](@color[yellow](Shell&gt;) &nbsp;SampleApp)</font>&nbsp;<br><br>
 </span></p>
 
 
