@@ -672,7 +672,7 @@ Note:
 @title[Lab 1 Build and Test Application]
 <p align="right"><span class="gold" ><b>Lab 1: Build and Test Application</b></span></p>
 <br>
-<span style="font-size:0.8em" >Build SampleApp - Cd to ~/src/edk2 dir </span>
+<span style="font-size:0.8em" >Build SampleApp - Cd to ~/src/edk2-ws/edk2 dir </span>
 ```shell
    bash$ build
 ```
@@ -691,33 +691,46 @@ Note:
 Note:
 
 
----?image=/assets/images/slides/Slide28.JPG
+---?image=/assets/images/slides/Slide18.JPG
 @title[Lab 1: Run Qemu Script]
 <p align="right"><span class="gold" ><b>Lab 1: Run the Qemu Script</b></span></p>
+@snap[north-west span-50 ]
 <br>
-<div class="left">
-<span style="font-size:0.7em" >Test by Invoking Qemu</span>
-<pre>
-```
-  bash$ cd ~/run-ovmf
-  bash$ . RunQemu.sh
-```
-</pre>
-<span style="font-size:0.7em" >Run the application from the shell</span><br>
-<span style="font-size:0.5em" ><span style="background-color: #101010">&nbsp;<font color="yellow">`Shell> `&nbsp;</font>`SampleApp`&nbsp;</span></span><br>
-<p style="line-height:90%"><span style="font-size:0.7em" >Check the contents of the debug.log file </span></p>
-<pre>
-```
-  bash$ cat debug.log
-```
-</pre>
-<span style="font-size:0.8em" ><font color="yellow">Exit QEMU</font></span>
+<br>
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br><br><br></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
 
-</pre>
-</div>
-<div class="right">
-<span style="font-size:0.8em" >&nbsp;  </span>
-</div>
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
+
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
+
+@snapend
+
+@snap[north-west span-50 ]
+<br>
+<br>
+<span style="font-size:0.7em" >Test by Invoking Qemu</span>
+
+<p style="line-height:45%" align="left" ><span style="font-size:0.55em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+  bash$ cd ~/run-ovmf<br>&nbsp;&nbsp;
+  bash$ . RunQemu.sh
+</span></p>
+
+<p style="line-height:70%"  align="left"><span style="font-size:0.7em" >
+Run the application from the shell<br>
+&nbsp;&nbsp;
+<font face="Consolas">@size[.7em](@color[yellow](Shell&gt;) &nbsp;SampleApp)</font>&nbsp;
+</span></p>
+
+
+<p style="line-height:70%"  align="left"><span style="font-size:0.7em" >Check the contents of the debug.log file <br>
+<font face="Consolas">@size[.7em](  bash$ cat debug.log)</font><br><br>
+  
+<font color="yellow">Exit QEMU</font>
+</span></p>
+
 
 Note:
 
