@@ -591,7 +591,9 @@ From the terminal
 ---
 @title[Lab 1: Add debug statements SampleApp 02]
 <p align="right"><span class="gold" ><b>Lab 1: Add debug statements to SampleApp</b></span></p>
-<p style="line-height:90%"><span style="font-size:0.7em" >Locate the `UefiMain` function. Then copy and paste the following code after the <span style="background-color: #101010">&nbsp;"`EFI_INPUT_KEY  KEY;`"</span> statement: and before the first <span style="background-color: #101010">&nbsp;`Print()` </span>statement </span></p>
+<p style="line-height:85%"><span style="font-size:0.7em" >Locate the <font face="Consolas">UefiMain</font> function. Then copy and paste the following 
+code after the <span style="background-color: #101010">&nbsp;"<font face="Consolas">EFI_INPUT_KEY  KEY;</font>"</span> statement: and before the first <span style="background-color: #101010">&nbsp;<font face="Consolas">Print()</font> </span>statement </span></p>
+
 ```c
 DEBUG ((0xffffffff, "\n\nUEFI Base Training DEBUG DEMO\n") );
 DEBUG ((0xffffffff, "0xffffffff USING DEBUG ALL Mask Bits Set\n") );
@@ -621,9 +623,37 @@ DEBUG ((DEBUG_ERROR,    " 0x%08x USING DEBUG DEBUG_ERROR\n", (UINTN)(DEBUG_ERROR
 Note:
 
 
----?image=/assets/images/slides/Slide26.JPG
+---?image=/assets/images/slides/Slide16.JPG
 @title[Lab 1: Update the Qemu Script]
 <p align="right"><span class="gold" ><b>Lab 1: Update the Qemu Script</b></span></p>
+@snap[north-west span-50 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Edit  the Linux shell script to run the QEMU from the run-ovmf directory and add  the option for a serial log<br>
+<font face="Consolas">@size[.8em](bash$ gedit RunQemu.sh)</font>
+</span></p>
+<p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" >
+<font color="black">
+qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents \<br>
+-net none -debugcon file:debug.log \<br>
+-global isa-debugcon.iobase=0x402  -serial file:serial.log
+<br><br><br>&nbsp;
+</font>
+</span></p>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
+Save and Exit
+</span></p>
+@snapend
+
 
 Note:
 
