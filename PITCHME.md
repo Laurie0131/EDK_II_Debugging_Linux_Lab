@@ -699,10 +699,10 @@ Note:
 <p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br><br><br></span></p>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
 
-<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br></span></p>
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br></span></p>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
 
-<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br></span></p>
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br></span></p>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
 
 @snapend
@@ -714,13 +714,13 @@ Note:
 
 <p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
   bash$ cd ~/run-ovmf<br>&nbsp;&nbsp;
-  bash$ . RunQemu.sh
+  bash$ . RunQemu.sh<br>
 </span></p>
 
 <p style="line-height:70%"  align="left"><span style="font-size:0.7em" >
 Run the application from the shell<br>
 &nbsp;&nbsp;
-<font face="Consolas">@size[.7em](@color[yellow](Shell&gt;) &nbsp;SampleApp)</font>&nbsp;
+<font face="Consolas">@size[.7em](@color[yellow](Shell&gt;) &nbsp;SampleApp)</font>&nbsp;<br>
 </span></p>
 
 
