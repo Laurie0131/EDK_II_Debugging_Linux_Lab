@@ -525,17 +525,17 @@ Note:
 ---
 @title[Lab 1: Add debug statements SampleApp]
 <p align="right"><span class="gold" ><b>Lab 1: Add debug statements to SampleApp</b></span></p>
-@snap[north-west span-60 ]
+@snap[north-west span-85 ]
 <br>
 <br>
 <br>
 <p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br></span></p>
 
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br><br>&nbsp;</span></p>)
 <br>
 <br>
 <br>
-<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br></span></p>
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br></span></p>
 
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
 
@@ -543,7 +543,7 @@ Note:
 
 <br>
 <ul>
-  <li><span style="font-size:0.8em" >Open a Teminal Prompt and type <font face="Consolas">@size[.8em](cd ~/src/edk2-ws)</font></li><br><br><br>
+  <li><span style="font-size:0.8em" >Open a Teminal Prompt and type <font face="Consolas">@size[.8em](cd ~/src/edk2-ws)</font></li><br><br><br><br>
   <li><span style="font-size:0.78em" >Open <font face="Consolas">@size[.8em](~/src/edk2-ws/edk2/SampleApp/SampleApp.c)</font> </span></li><br>
   <li><span style="font-size:0.78em" >Add the following to the include statements at the top of the file after the last "<font face="Consolas">#include</font>" statement: </span></li>
 </ul>
@@ -565,7 +565,7 @@ bash$ . edksetup.sh
 <br>
 <br>
 <br>
-<br><br>
+<br><br><br>
 &num;include &lt;Library/DebugLib.h&gt;
 </span></p>
 @snapend
