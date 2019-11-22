@@ -765,8 +765,8 @@ In this lab, you'll learn how to use PCD values to change debugging capabilities
       gEfiMdePkgTokenSpaceGuid.PcdDebugPrintErrorLevel|0xffffffff
  }
 ```
-<span style="font-size:0.7em" >Save and close `~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
-<span style="font-size:0.7em" >Build SampleApp : </span><span style="font-size:0.5em" ><span style="background-color: #000000">&nbsp;&nbsp;`bash$ build`&nbsp;&nbsp;</span></span><br>
+<span style="font-size:0.7em" >Save and close <font face="Consolas">~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc</font> </span><br>
+<span style="font-size:0.7em" >Build SampleApp : </span><span style="font-size:0.5em" ><span style="background-color: #000000">&nbsp;&nbsp;<font face="Consolas">bash$ build</font>&nbsp;&nbsp;</span></span><br>
 <span style="font-size:0.7em" >Copy  SampleApp.efi to hda-contents</span>
 ```shell
  bash$ cd ~/run-ovmf/hda-contents
@@ -776,35 +776,59 @@ In this lab, you'll learn how to use PCD values to change debugging capabilities
 Note:
 
 
----?image=/assets/images/slides/Slide28.JPG
+---?image=/assets/images/slides/Slide21.JPG
 @title[Lab 2: Run Qemu Script]
 <p align="right"><span class="gold" ><b>Lab 2: Run the Qemu Script</b></span></p>
+@snap[north-west span-50 ]
 <br>
-<div class="left">
-<span style="font-size:0.7em" >Test by Invoking Qemu</span>
-<pre>
-```
-  bash$ cd ~/run-ovmf
-  bash$ . RunQemu.sh
-```
-</pre>
-<span style="font-size:0.7em" >Run the application from the shell</span><br>
-<span style="font-size:0.5em" ><span style="background-color: #101010">&nbsp;<font color="yellow">`Shell> `&nbsp;</font>`SampleApp`&nbsp;</span></span><br>
-<span style="font-size:0.7em" >Check the contents of the debug.log file </span>
-<pre>
-```
-  bash$ cat debug.log
-```
-</pre>
-<span style="font-size:0.8em" ><font color="yellow">Exit QEMU</font></span>
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br><br><br><br></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br>&nbsp;</span></p>)
 
-</pre>
-</div>
-<div class="right">
-<span style="font-size:0.8em" >&nbsp;  </span>
-</div>
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
+
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br><br><br><br><br></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
+
+@snapend
+
+@snap[north-west span-50 ]
+<br>
+<br>
+<span style="font-size:0.7em" >Test by Invoking Qemu</span>
+
+<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+  bash$ cd ~/run-ovmf<br>&nbsp;&nbsp;
+  bash$ . RunQemu.sh<br>
+</span></p>
+
+<p style="line-height:70%"  align="left"><span style="font-size:0.7em" ><br>
+Run the application from the shell<br>
+&nbsp;&nbsp;
+<font face="Consolas">@size[.7em](@color[yellow](Shell&gt;) &nbsp;SampleApp)</font>&nbsp;<br><br>
+</span></p>
+
+
+<p style="line-height:70%"  align="left"><span style="font-size:0.7em" >Check the contents of the debug.log file <br><br>&nbsp;&nbsp;
+<font face="Consolas">@size[.7em](  bash$ cat debug.log)</font><br><br>
+  
+<font color="yellow">Exit QEMU</font>
+</span></p>
+
 
 Note:
+- Test by Invoking Qemu
+- bash$ cd ~/run-ovmf 
+- bash$ . RunQemu.sh
+
+- Run the application from the shell
+- Shell&gt; SampleApp
+
+- Check the contents of the debug.log file
+- bash$ cat debug.log
+
+- Exit QEMU
+
 
 ---?image=assets/images/binary-strings-black2.jpg
 @title[Changing Compiler & Linker Flags Section]
