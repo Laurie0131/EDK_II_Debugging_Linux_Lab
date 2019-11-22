@@ -525,19 +525,68 @@ Note:
 ---
 @title[Lab 1: Add debug statements SampleApp]
 <p align="right"><span class="gold" ><b>Lab 1: Add debug statements to SampleApp</b></span></p>
+@snap[north-west span-60 ]
+<br>
+<br>
+<br>
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br></span></p>
+
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br>&nbsp;</span></p>)
+<br>
+<br>
+<br>
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br></span></p>
+
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
+
+@snapend
+
 <br>
 <ul>
-  <li><span style="font-size:0.8em" >Open a Terminal Command Prompt (Cnt-Alt-T) and type cd ~/src/edk2<br></span>&nbsp;&nbsp;&nbsp;<span style="font-size:0.6em" ><span style="background-color: #101010">&nbsp;` bash$  .  edksetup.sh `&nbsp;</span> </span></li><br>
-  <li><span style="font-size:0.8em" >Open `~/src/edk2-ws/edk2/SampleApp/SampleApp.c` </span></li><br>
-  <li><span style="font-size:0.8em" >Add the following to the include statements at the top of the file after below the last "`#include`" statement: </span></li>
-<pre>
-```
- #include <Library/DebugLib.h>
-```
-</pre>
+  <li><span style="font-size:0.8em" >Open a Teminal Prompt and type <font face="Consolas">@size[.8em](cd ~/src/edk2-ws)</font></li><br><br><br>
+  <li><span style="font-size:0.78em" >Open <font face="Consolas">@size[.8em](~/src/edk2-ws/edk2/SampleApp/SampleApp.c)</font> </span></li><br>
+  <li><span style="font-size:0.78em" >Add the following to the include statements at the top of the file after the last "<font face="Consolas">#include</font>" statement: </span></li>
 </ul>
 
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><br><br><br><br>
+bash$ export WORKSPACE=$PWD <br>
+bash$ export PACKAGES_PATH=$WORKSPACE/edk2:$WORKSPACE/edk2-libc<br>
+bash$ cd edk2 <br>
+bash$ . edksetup.sh
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+&num;include &lt;Library/DebugLib.h&gt;
+</span></p>
+@snapend
+
+
 Note:
+
+From the terminal
+
+```
+    bash$ cd ~/src/edk2-ws
+    bash$ export WORKSPACE=$PWD
+    bash$ export PACKAGES_PATH=$WORKSPACE/edk2:$WORKSPACE/edk2-libc
+    bash$ cd edk2
+    bash$ . edksetup.sh
+```
+- Add the following to the include statements at the top of the file after below the last “include” statement:
+
+``` 
+ #include <Library/DebugLib.h>
+```
 
 ---
 @title[Lab 1: Add debug statements SampleApp 02]
