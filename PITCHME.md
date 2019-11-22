@@ -1556,7 +1556,7 @@ Note:
 bash$ cd ~/run-ovmf
 bash$ cat debug.log
 ```
-<p style="line-height:90%"><span style="font-size:0.7em" >See the line: <font face="Consolas">Loading driver at 0x00006AEE000</font> is the memory location where your UEFI Application is loaded. </span></p>
+<p style="line-height:75%"><span style="font-size:0.7em" >See the line: <font face="Consolas">Loading driver at 0x00006AEE000</font> is the memory location where your UEFI Application is loaded. </span></p>
 ```shell
  InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 6F0F028
  Loading driver at 0x00006AEE000 EntryPoint=0x00006AEE756 SampleApp.efi
@@ -1605,7 +1605,7 @@ bash$ gdb --tui
  (gdb) file SampleApp.efi
  Reading symbols from SampleApp.efi...(no debugging symbols found)...done. 
 ```
-<p style="line-height:75%"><span style="font-size:0.7em" >Check where GDB has for ".text" and ".data" offsets with "<font face="Consolas">info files</font>" command.</span></p>
+<p style="line-height:70%"><span style="font-size:0.7em" >Check where GDB has for ".text" and ".data" offsets with "<font face="Consolas">info files</font>" command.</span></p>
 ```shell
  (gdb) info files
  Symbols from "/home/u-mypc/run-ovmf/hda-contents/SampleApp.efi".
@@ -1627,7 +1627,7 @@ Note:
 @title[Lab 5.7: Calculate Addresses]
 <p align="right"><span class="gold" ><b>Lab 5.7: Calculate Addresses</b></span></p>
 <br>
-<p style="line-height:70%"><span style="font-size:0.7em" >We need to calculate our addresses for ".text" and ".data" section.</span><br>
+<p style="line-height:65%"><span style="font-size:0.7em" >We need to calculate our addresses for ".text" and ".data" section.</span><br>
 <span style="font-size:0.55em" > The application is loaded under <font face="Consolas">0x00006AEE000</font> (loading driver point - <b>NOT Entrypoint</b>) and we know text and data offsets.</span></p>
 ```shell
  text = 0x00006AEE000  +  0x00000240 = 0x06AEE240
