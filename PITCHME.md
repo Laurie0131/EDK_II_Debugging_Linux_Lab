@@ -630,6 +630,8 @@ Note:
 <br>
 <br>
 <br>
+<br>
+<br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
 @snapend
 
@@ -638,15 +640,17 @@ Note:
 <br>
 <br>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
-Edit  the Linux shell script to run the QEMU from the run-ovmf directory and add  the option for a serial log<br>
+Edit  the Linux shell script to run the QEMU from the run-ovmf directory and add  the option for a serial log<br><br>
 <font face="Consolas">@size[.8em](bash$ gedit RunQemu.sh)</font>
+<br><br><br>
 </span></p>
+
 <p style="line-height:45%" align="left" ><span style="font-size:0.57em; font-family:Consolas;" >
 <font color="black">
 qemu-system-x86_64 -pflash bios.bin -hda fat:rw:hda-contents \<br>
 -net none -debugcon file:debug.log \<br>
 -global isa-debugcon.iobase=0x402  -serial file:serial.log
-<br><br><br>&nbsp;
+<br>&nbsp;
 </font>
 </span></p>
 <p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >
