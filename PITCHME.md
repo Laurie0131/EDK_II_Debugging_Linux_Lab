@@ -854,7 +854,7 @@ Note:
 <br>
 <br>
 <br>
-@box[bg-navy text-white waved   ](<p style="line-height:90%" ><span style="font-size:01.0em; font-weight: bold;" >DSC `[BuildOptions]` section &lpar;platform scope&rpar;<br>&nbsp;</span></p>)
+@box[bg-navy text-white waved   ](<p style="line-height:90%" ><span style="font-size:01.0em; font-weight: bold;" >DSC <font face="Consolas">[BuildOptions]</font> section &lpar;platform scope&rpar;<br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-west span-50 fragment]
@@ -864,7 +864,7 @@ Note:
 <br>
 <br>
 <br>
-@box[bg-purple-pp text-white waved  ](<p style="line-height:90%" ><span style="font-size:01.0em; font-weight: bold;" >INF `[BuildOptions]` section <br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white waved  ](<p style="line-height:90%" ><span style="font-size:01.0em; font-weight: bold;" >INF <font face="Consolas">[BuildOptions]</font> section <br>&nbsp;</span></p>)
 @snapend
 
 
@@ -875,7 +875,7 @@ Note:
 <br>
 <br>
 <br>
-@box[bg-lt-blue-pp text-white waved  ](<p style="line-height:90%" ><span style="font-size:01.0em; font-weight: bold;" >DSC  &lt;`BuildOptions`&gt; under a specific module <br>&nbsp;</span></p>)
+@box[bg-lt-blue-pp text-white waved  ](<p style="line-height:90%" ><span style="font-size:01.0em; font-weight: bold;" >DSC  &lt;<font face="Consolas">BuildOptions</font>&gt; under a specific module <br>&nbsp;</span></p>)
 @snapend
 
 
@@ -903,16 +903,16 @@ Note:
 - DSC <BuildOptions> under a specific module
   - Same usage 
 
-
 ---
 @title[Compiler / Linker Flags]
 <p align="right"><span class="gold" ><b>Compiler / Linker Flags</b></span></p>
 
+
 @snap[north-west span-100]
 <br>
 <br>
-<p align="left" style="line-height:80%"><span style="font-size:0.9em; ">@color[#87E2A9](Example from Microsoft* compiler to turn off optimization)</span></p>
-<p style="line-height:40%" align="left"><span style="font-size:0.650em; font-family:Consolas; " >&nbsp;&nbsp;"`/02` " to "`/01`" requires "`/0d /01`"</span></p>
+<p align="left" style="line-height:80%"><span style="font-size:0.9em; ">@color[#A8ff60](Example from Microsoft* compiler to turn off optimization)</span></p>
+<p style="line-height:40%" align="left"><span style="font-size:0.650em; font-family:Consolas; " >&nbsp;&nbsp;<font face="Consolas">"/02 " to "/01"</font> requires <font face="Consolas">"/0d /01"</font></span></p>
 <br>
 @snapend
 
@@ -969,9 +969,9 @@ Note:
 Note:
 
 
----?image=/assets/images/slides/Slide25_2.JPG
+---?image=/assets/images/slides/Slide26.JPG
 @title[DebugLib Class]
-<p align="center"><span class="gold" ><b>The `DebugLib` Class</b></span></p>
+<p align="center"><span class="gold" ><b>The <font face="Consolas">DebugLib</font> Class</b></span></p>
 
 @snap[north-west span-85]
 <p style="line-height:40%" align="left"><span style="font-size:0.650em; font-family:Consolas; " ><br><br>&nbsp;</span></p>
@@ -985,7 +985,7 @@ Note:
 <br>
 <br>
 <br>
-<p align="left" style="line-height:60%"><span style="font-size:0.9em; "><font color="#87E2A9"><b>Macros</b><br>@size[0.65em](&lpar;where PCDs ard checked&rpar;)</font></span></p>
+<p align="left" style="line-height:60%"><span style="font-size:0.9em; "><font color="#A8ff60"><b>Macros</b><br>@size[0.65em](&lpar;where PCDs ard checked&rpar;)</font></span></p>
 @box[bg-grey-05 text-white rounded my-box-pad2  ](<p style="line-height:40%" align="left"><span style="font-size:0.450em; font-family:Consolas; " >&nbsp;&nbsp;ASSERT &lpar;Expression&rpar;<br>&nbsp;&nbsp;DEBUG &lpar;Expression&rpar;<br>&nbsp;&nbsp;ASSERT_EFI_ERROR &lpar;StatusParameter&rpar;<br>&nbsp;&nbsp;ASSERT_PROTOCOL_ALREADY_INSTALLED&lpar;. . .&rpar;<br>&nbsp;&nbsp;</span></p>)
 <br>
 @snapend
@@ -1003,7 +1003,7 @@ Note:
 <br>
 <br>
 <br>
-<p align="left" style="line-height:80%"><span style="font-size:0.9em; "><font color="#87E2A9"><b>Advanced Macros</b></font></span></p>
+<p align="left" style="line-height:80%"><span style="font-size:0.9em; "><font color="#A8ff60"><b>Advanced Macros</b></font></span></p>
 @box[bg-grey-05 text-white rounded my-box-pad2  ](<p style="line-height:40%" align="left"><span style="font-size:0.450em; font-family:Consolas; " >&nbsp;&nbsp;DEBUG_CODE &lpar;Expression&rpar;<br>&nbsp;&nbsp;DEBUG_CODE_BEGIN&lpar;&rpar; & DEBUG_CODE_END&lpar;&rpar;<br>&nbsp;&nbsp;DEBUG_CLEAR_MEMORY&lpar;...&rpar;<br>&nbsp;&nbsp;</span></p>)
 <br>
 @snapend
@@ -1031,10 +1031,10 @@ Note:
 
 
 
----?image=/assets/images/slides/Slide26_1.JPG
+---?image=/assets/images/slides/Slide27.JPG
 @title[DebugLib Instances (1)]
 <br>
-<p align="left"><span class="gold" ><b>`DebugLib` Instances (1)</b></span></p>
+<p align="left"><span class="gold" ><b><font face="Consolas">DebugLib</font> Instances (1)</b></span></p>
 
 @snap[north-west span-75]
 <p style="line-height:40%" align="left"><span style="font-size:0.650em; font-family:Consolas; " ><br><br><br><br><br>&nbsp;</span></p>
@@ -1059,10 +1059,10 @@ Note:
 <br>
 <p style="line-height:40%" align="left"><span style="font-size:0.650em; font-family:Consolas; " ><br><br><br>&nbsp;</span></p>
 <ul>
-  <li><span style="font-size:0.8em">Instance of `DebugLib`   </span></li>
-  <li><span style="font-size:0.8em">Uses `SerialPortLib` class to send debug output to serial port</span></li>
-  <li><span style="font-size:0.8em">Default for many platforms:  `BaseDebugLibNull`  </span></li>
-  <li><span style="font-size:0.8em">OVMF uses it with Switch `DEBUG_ON_SERIAL_PORT`  </span></li>
+  <li><span style="font-size:0.8em">Instance of <font face="Consolas">DebugLib</font>   </span></li>
+  <li><span style="font-size:0.8em">Uses <font face="Consolas">SerialPortLib</font> class to send debug output to serial port</span></li>
+  <li><span style="font-size:0.8em">Default for many platforms:  <font face="Consolas">BaseDebugLibNull</font>  </span></li>
+  <li><span style="font-size:0.8em">OVMF uses it with Switch <font face="Consolas">DEBUG_ON_SERIAL_PORT</font>  </span></li>
 </ul>
 @snapend
 
@@ -1089,10 +1089,10 @@ Note:
 
 
 
----?image=/assets/images/slides/Slide26_1.JPG
+---?image=/assets/images/slides/Slide27.JPG
 @title[DebugLib Instances (2)]
 <br>
-<p align="left"><span class="gold" ><b>`DebugLib` Instances (2)</b></span></p>
+<p align="left"><span class="gold" ><b><font face="Consolas">DebugLib</font> Instances (2)</b></span></p>
 
 
 
@@ -1119,7 +1119,7 @@ Note:
 <br>
 <p style="line-height:40%" align="left"><span style="font-size:0.650em; font-family:Consolas; " ><br><br><br>&nbsp;</span></p>
 <ul>
-  <li><span style="font-size:0.8em">Instances of `DebugLib` (for apps and drivers)</span></li><br>
+  <li><span style="font-size:0.8em">Instances of <font face="Consolas">DebugLib</font> (for apps and drivers)</span></li><br>
   <li><span style="font-size:0.8em">Send all debug output to console/debug console</span></li>
 </ul>
 @snapend
@@ -1143,10 +1143,10 @@ Note:
 - Make sure that the console is visible
 
 
----?image=/assets/images/slides/Slide26_1.JPG
+---?image=/assets/images/slides/Slide27.JPG
 @title[DebugLib Instances (3)]
 <br>
-<p align="left"><span class="gold" ><b>`DebugLib` Instances (3)</b></span></p>
+<p align="left"><span class="gold" ><b><font face="Consolas">DebugLib</font> Instances (3)</b></span></p>
 
 @snap[north-west span-75]
 <p style="line-height:40%" align="left"><span style="font-size:0.650em; font-family:Consolas; " ><br><br><br><br><br>&nbsp;</span></p>
@@ -1171,9 +1171,9 @@ Note:
 <br>
 <p style="line-height:40%" align="left"><span style="font-size:0.650em; font-family:Consolas; " ><br><br><br>&nbsp;</span></p>
 <ul>
-  <li><span style="font-size:0.8em">Sends ASCII String  specified by  Description Value to the `ReportStatusCode()`  </span></li>
-  <li><span style="font-size:0.8em">May also use the `SerialPortLib` class to send debug output to serial port</span></li>
-  <li><span style="font-size:0.8em">`BaseDebugLibNull`  - Resolves references </span></li>
+  <li><span style="font-size:0.8em">Sends ASCII String  specified by  Description Value to the <font face="Consolas">ReportStatusCode()</font>  </span></li>
+  <li><span style="font-size:0.8em">May also use the <font face="Consolas">SerialPortLib</font> class to send debug output to serial port</span></li>
+  <li><span style="font-size:0.8em"><font face="Consolas">BaseDebugLibNull</font>  - Resolves references </span></li>
 </ul>
 <br>
 <br>
@@ -1257,6 +1257,8 @@ Note:
   }
 </pre>
 - another Note: Use a different debugging library instance only on the module in question (managing size changes)
+
+
 
 
 ---?image=/assets/images/slides/Slide_LabSec.JPG
