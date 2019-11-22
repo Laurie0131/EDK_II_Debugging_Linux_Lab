@@ -471,6 +471,8 @@ This lab uses code from a previous exercise as a starting point (refer to  Writi
 ---
 @title[Lab 1: Catch Up SampleApp]
 <p align="right"><span class="gold" ><b>Lab 1: Catch up from previous lab</b></span></p>
+@snap[north-west span-100 ]
+<br>
 <span style="font-size:0.8em" >Skip if Lab <a href="https://gitpitch.com/tianocore-training/Writing_UEFI_App_Lab/master#/">Writing UEFI App Lab</a> completed</span>
 <ul>
    <li><span style="font-size:0.8em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_Linux_Ovmf_Lab/master#/">Lab Setup</a> from previous Labs  </span></li>
@@ -480,6 +482,7 @@ This lab uses code from a previous exercise as a starting point (refer to  Writi
    <li><span style="font-size:0.78em" >Add the following to the <font face="Consolas">[Components]</font> section: </span></li><br><br><br>
    <li><span style="font-size:0.78em" >Save and close the file <font face="Consolas">@size[.8em](C:/FW/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc)</font>  </span></li>
 </ul>
+@snapend
 
 @snap[north-west span-60 ]
 <br>
@@ -514,6 +517,18 @@ SampleApp/SampleApp.inf
 </span></p>
 @snapend
 
+@snap[north-west span-100 ]
+<br>
+<span style="font-size:0.8em" >Skip if Lab <a href="https://gitpitch.com/tianocore-training/Writing_UEFI_App_Lab/master#/">Writing UEFI App Lab</a> completed</span>
+<ul>
+   <li><span style="font-size:0.8em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_Linux_Ovmf_Lab/master#/">Lab Setup</a> from previous Labs  </span></li>
+   <li><span style="font-size:0.8em" >Create a Directory under the workspace <font face="Consolas">@size[.8em](~/src/edk2-ws/edk2 : "SampleApp")</font></span></li>
+   <li><span style="font-size:0.8em" >Copy contents of <font face="Consolas">@size[.8em](~/FW/LabSampleCode/SampleAppDebug to ~/src/edk2-ws/edk2/SampleApp)</font></span></li>
+   <li><span style="font-size:0.8em" >Open <font face="Consolas">@size[.8em](~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc)</font></span></li>
+   <li><span style="font-size:0.78em" >Add the following to the <font face="Consolas">[Components]</font> section: </span></li><br><br><br>
+   <li><span style="font-size:0.78em" >Save and close the file <font face="Consolas">@size[.8em](C:/FW/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc)</font>  </span></li>
+</ul>
+@snapend
 
 Note:
 
