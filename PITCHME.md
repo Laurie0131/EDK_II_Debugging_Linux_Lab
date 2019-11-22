@@ -963,7 +963,7 @@ Note:
 ---?image=assets/images/binary-strings-black2.jpg
 @title[DebugLib Usage Section]
 <br><br><br><br><br><br><br>
-### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`DebugLib` Usage</span>
+### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font face="Consolas">DebugLib</font> Usage</span>
 <span style="font-size:0.9em" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
 Note:
@@ -1281,16 +1281,16 @@ Note:
 @title[Lab 3: Using Library Instances for Debugging]
 <p align="right"><span class="gold" ><b>Lab 3: Using Library Instances for Debugging</b></span></p>
 <br>
-<span style="font-size:0.7em" >Open `~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
-<span style="font-size:0.7em" >Replace `SampleApp/SampleApp.inf { . . .}` with the following:</span><br>
+<span style="font-size:0.7em" >Open <font face="Consolas">~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc</font> </span><br>
+<span style="font-size:0.7em" >Replace <font face="Consolas">SampleApp/SampleApp.inf { . . .}</font> with the following:</span><br>
 ```c
   SampleApp/SampleApp.inf {
    <LibraryClasses>
     DebugLib|MdePkg/Library/UefiDebugLibConOut/UefiDebugLibConOut.inf
  }
 ```
-<span style="font-size:0.7em" >Save and close `~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
-<span style="font-size:0.7em" >Build SampleApp : </span><span style="font-size:0.5em" ><span style="background-color: #000000">&nbsp;&nbsp;`bash$ build`&nbsp;&nbsp;</span></span><br>
+<span style="font-size:0.7em" >Save and close <font face="Consolas">~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc</font> </span><br>
+<span style="font-size:0.7em" >Build SampleApp : </span><span style="font-size:0.5em" ><span style="background-color: #000000">&nbsp;&nbsp;<font face="Consolas">bash$ build</font>&nbsp;&nbsp;</span></span><br>
 <span style="font-size:0.7em" >Copy  SampleApp.efi to hda-contents</span>
 ```shell
  bash$ cd ~/run-ovmf/hda-contents
@@ -1299,38 +1299,71 @@ Note:
 
 Note:
 
----?image=/assets/images/slides/Slide62.JPG
+
+---?image=/assets/images/slides/Slide33.JPG
 @title[Lab 3: Run Qemu Script]
 <p align="right"><span class="gold" ><b>Lab 3: Run the Qemu Script</b></span></p>
+@snap[north-west span-50 ]
 <br>
-<div class="left">
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br><br><br><br></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br>&nbsp;</span></p>)
+
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
+
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br><br><br><br><br></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
+
+@snapend
+
+@snap[north-west span-50 ]
+<br>
+<br>
 <span style="font-size:0.7em" >Test by Invoking Qemu</span>
-<pre>
-```
-  bash$ cd ~/run-ovmf
-  bash$ . RunQemu.sh
-```
-</pre>
-<span style="font-size:0.7em" >Run the application from the shell</span><br>
-<span style="font-size:0.5em" ><span style="background-color: #101010">&nbsp;<font color="yellow">`Shell> `&nbsp;</font>`SampleApp`&nbsp;</span></span><br>
-<p style="line-height:90%"><span style="font-size:0.7em" >See that the output from the Debug statements now goes to the QEMU console </span><br></p>
-<br>
-<span style="font-size:0.8em" ><font color="yellow">Exit QEMU</font></span>
-</div>
-<div class="right">
-<span style="font-size:0.8em" >&nbsp;  </span>
-</div>
+
+<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+  bash$ cd ~/run-ovmf<br>&nbsp;&nbsp;
+  bash$ . RunQemu.sh<br>
+</span></p>
+
+<p style="line-height:70%"  align="left"><span style="font-size:0.7em" ><br>
+Run the application from the shell<br>
+&nbsp;&nbsp;
+<font face="Consolas">@size[.7em](@color[yellow](Shell&gt;) &nbsp;SampleApp)</font>&nbsp;<br><br>
+</span></p>
+
+
+<p style="line-height:70%"  align="left"><span style="font-size:0.7em" >See that the output from the Debug statements now goes to the QEMU console <br><br>&nbsp;&nbsp;
+<font face="Consolas">@size[.7em](  bash$ cat debug.log)</font><br><br>
+  
+<font color="yellow">Exit QEMU</font>
+</span></p>
+
 
 Note:
+- Test by Invoking Qemu
+- bash$ cd ~/run-ovmf 
+- bash$ . RunQemu.sh
+
+- Run the application from the shell
+- Shell&gt; SampleApp
+
+- See that the output from the Debug statements now goes to the QEMU console
+- bash$ cat debug.log
+
+- Exit QEMU
+
+
+
 
 ---?image=/assets/images/slides/Slide_LabSec.JPG
 @title[Lab 4: Serial port Instance of DebugLib]
 <br>
 <br>
-<p align="Left"><span class="gold" ><b>Lab 4: Serial port Instance of `DebugLib`</b></span></p>
+<p align="Left"><span class="gold" ><b>Lab 4: Serial port Instance of <font face="Consolas">DebugLib</font></b></span></p>
 <br>
 <div class="left1">
-<span style="font-size:0.8em" >In this lab,  you'll change the `DebugLib` to the Serial port instance. </span>
+<span style="font-size:0.8em" >In this lab,  you'll change the <font face="Consolas">DebugLib</font> to the Serial port instance. </span>
 </div>
 <div class="right1">
 <span style="font-size:0.8em" >&nbsp;  </span>
@@ -1346,16 +1379,16 @@ To change the entire debug to Serial.log the switch "-D DEBUG_ON_SERIAL_PORT" ca
 @title[Lab 4: Using Serial port Library Instances]
 <p align="right"><span class="gold" ><b>Lab 4: Using Serial port Library Instances</b></span></p>
 <br>
-<span style="font-size:0.7em" >Open `~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
-<span style="font-size:0.7em" >Replace `SampleApp/SampleApp.inf { . . .}` with the following:</span><br>
+<span style="font-size:0.7em" >Open <font face="Consolas">~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc</font> </span><br>
+<span style="font-size:0.7em" >Replace <font face="Consolas">SampleApp/SampleApp.inf { . . .}</font> with the following:</span><br>
 ```c
   SampleApp/SampleApp.inf {
    <LibraryClasses>      
       DebugLib|MdePkg/Library/BaseDebugLibSerialPort/BaseDebugLibSerialPort.inf
  }
 ```
-<span style="font-size:0.7em" >Save and close `~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc` </span><br>
-<span style="font-size:0.7em" >Build SampleApp : </span><span style="font-size:0.5em" ><span style="background-color: #000000">&nbsp;&nbsp;`bash$ build`&nbsp;&nbsp;</span></span><br>
+<span style="font-size:0.7em" >Save and close <font face="Consolas">~src/edk2-ws/edk2/OvmfPkg/OvmfPkgX64.dsc</font> </span><br>
+<span style="font-size:0.7em" >Build SampleApp : </span><span style="font-size:0.5em" ><span style="background-color: #000000">&nbsp;&nbsp;<font face="Consolas">bash$ build</font>&nbsp;&nbsp;</span></span><br>
 <span style="font-size:0.7em" >Copy  SampleApp.efi to hda-contents</span>
 ```shell
  bash$ cd ~/run-ovmf/hda-contents
@@ -1365,35 +1398,60 @@ To change the entire debug to Serial.log the switch "-D DEBUG_ON_SERIAL_PORT" ca
 Note:
 
 
----?image=/assets/images/slides/Slide67.JPG
+---?image=/assets/images/slides/Slide36.JPG
 @title[Lab 4: Run Qemu Script]
 <p align="right"><span class="gold" ><b>Lab 4: Run the Qemu Script</b></span></p>
+@snap[north-west span-50 ]
 <br>
-<div class="left">
-<span style="font-size:0.7em" >Test by Invoking Qemu</span>
-<pre>
-```
-  bash$ cd ~/run-ovmf
-  bash$ . RunQemu.sh
-```
-</pre>
-<span style="font-size:0.7em" >Run the application from the shell</span><br>
-<span style="font-size:0.5em" ><span style="background-color: #101010">&nbsp;<font color="yellow">`Shell> `&nbsp;</font>`SampleApp`&nbsp;</span></span><br>
-<p style="line-height:90%"><span style="font-size:0.7em" >Check the contents of the serial.log file </span></p>
-<pre>
-```
-  bash$ cat serial.log
-```
-</pre>
-<span style="font-size:0.8em" ><font color="yellow">Exit QEMU</font></span>
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br><br><br><br></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" ><br>&nbsp;</span></p>)
 
-</pre>
-</div>
-<div class="right">
-<span style="font-size:0.8em" >&nbsp;  </span>
-</div>
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
+
+<p style="line-height:5%" align="left" ><span style="font-size:0.15em; font-family:Consolas;" ><br><br><br><br><br><br><br></span></p>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.5em;" >&nbsp;</span></p>)
+
+@snapend
+
+@snap[north-west span-50 ]
+<br>
+<br>
+<span style="font-size:0.7em" >Test by Invoking Qemu</span>
+
+<p style="line-height:45%" align="left" ><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+  bash$ cd ~/run-ovmf<br>&nbsp;&nbsp;
+  bash$ . RunQemu.sh<br>
+</span></p>
+
+<p style="line-height:70%"  align="left"><span style="font-size:0.7em" ><br>
+Run the application from the shell<br>
+&nbsp;&nbsp;
+<font face="Consolas">@size[.7em](@color[yellow](Shell&gt;) &nbsp;SampleApp)</font>&nbsp;<br><br>
+</span></p>
+
+
+<p style="line-height:70%"  align="left"><span style="font-size:0.7em" >Check the contents of the serial.log file <br><br>&nbsp;&nbsp;
+<font face="Consolas">@size[.7em](  bash$ cat serial.log)</font><br><br>
+  
+<font color="yellow">Exit QEMU</font>
+</span></p>
+
 
 Note:
+- Test by Invoking Qemu
+- bash$ cd ~/run-ovmf 
+- bash$ . RunQemu.sh
+
+- Run the application from the shell
+- Shell&gt; SampleApp
+
+- Check the contents of the serial.log file
+- bash$ cat serial.log
+
+- Exit QEMU
+
+
 
 ---?image=/assets/images/slides/Slide_LabSec.JPG
 @title[Lab 5: Debugging EDK II with GDB]
@@ -1415,13 +1473,13 @@ Note:
 @title[Lab 5.1: Update the Qemu Script]
 <p align="right"><span class="gold" ><b>Lab 5.1: Update the Qemu Script</b></span></p>
 <br>
-<p style="line-height:90%"><span style="font-size:0.8em" >Edit  the Linux shell script to run the QEMU from the run-ovmf directory and add  the option for GDB "-s" to 
+<p style="line-height:90%"><span style="font-size:0.8em" >Edit  the Linux shell script to run the QEMU from the run-ovmf directory and add  the option for GDB "@color[yellow](-s)" to 
 generate a symbol file and also use IA32 instead of x86_64</span></p><br>
 ```
  bash$ cd ~/run-ovmf
  bash$ gedit RunQemu.sh
 ```
-<span style="font-size:0.8em" > add the following to RunQemu.sh</span></span>
+<span style="font-size:0.8em" > Add the following to RunQemu.sh</span></span>
 ```
   qemu-system-i386 -s  -pflash bios.bin -hda fat:rw:hda-contents -net none -debugcon file:debug.log -global isa-debugcon.iobase=0x402 
 ```
@@ -1439,8 +1497,8 @@ Note:
 @title[Lab 5.2: Build Ovmf for IA32]
 <p align="right"><span class="gold" ><b>Lab 5.2: Build Ovmf for IA32</b></span></p>
 <br>
-<p style="line-height:90%"><span style="font-size:0.8em">Open `~/src/edk2-ws/edk2/OvmfPkg/OvmfPkgIa32.dsc` and add the application to the  (using IA32 )  at the end of the 
-   `[Components]` section.</span></p>
+<p style="line-height:90%"><span style="font-size:0.8em">Open <font face="Consolas">~/src/edk2-ws/edk2/OvmfPkg/OvmfPkgIa32.dsc</font> and add the application to the  (using IA32 )  at the end of the 
+   <font face="Consolas">[Components]</font> section.</span></p>
 ```php
   [Components]
    #  add at the end of the components section OvmfPkgIa32.dsc
@@ -1465,12 +1523,12 @@ Note:
 @title[Lab 5.3: Build Ovmf for IA32 03]
 <p align="right"><span class="gold" ><b>Lab 5.3: Build Ovmf for IA32</b></span></p>
 <br>
-<span style="font-size:0.8em">Copy the output of SampleApp to the `hda-contents` directory: </span>
+<span style="font-size:0.8em">Copy the output of SampleApp to the <font face="Consolas">hda-contents</font> directory: </span>
 ```
 bash$ cd ~/run-ovmf/hda-contents
 bash$ cp ~/src/edk2-ws/Build/OvmfIa32/DEBUG_GCC5/IA32/SampleApp  .
 ```
-<span style="font-size:0.8em">The following will be in the `~/run-ovmf/hda-contents/`</span>
+<span style="font-size:0.8em">The following will be in the <font face="Consolas">~/run-ovmf/hda-contents/</font></span>
 ```
    SampleApp.efi
    SampleApp.debug
@@ -1482,7 +1540,7 @@ bash$ cd ~/run-ovmf
 bash$ . RunQemu.sh
 ```
 <span style="font-size:0.7em" >Run the application from the shell</span><br>
-<span style="font-size:0.5em" ><span style="background-color: #101010">&nbsp;<font color="yellow">`Shell> `&nbsp;</font>`SampleApp`&nbsp;</span></span><br>
+<span style="font-size:0.5em" ><span style="background-color: #101010">&nbsp;<font face="Consolas">@color[yellow](Shell&gt;)&nbsp;SampleApp</font>&nbsp;</span></span><br>
 
 
 Note:
@@ -1493,12 +1551,12 @@ Note:
 @title[Lab 5.4: Check debug.log ]
 <p align="right"><span class="gold" ><b>Lab 5.4: Check debug.log</b></span></p>
 <br>
-<p style="line-height:90%"><span style="font-size:0.7em" >Open <font color="yellow"><b>another</b></font> Terminal(2) Prompt in the `run-ovmf` directory and check the `debug.log` file.</span></p>
+<p style="line-height:90%"><span style="font-size:0.7em" >Open <font color="yellow"><b>another</b></font> Terminal(2) Prompt in the <font face="Consolas">run-ovmf</font> directory and check the <font face="Consolas">debug.log</font> file.</span></p>
 ```
 bash$ cd ~/run-ovmf
 bash$ cat debug.log
 ```
-<p style="line-height:90%"><span style="font-size:0.7em" >See the line: `Loading driver at 0x00006AEE000` is the memory location where your UEFI Application is loaded. </span></p>
+<p style="line-height:90%"><span style="font-size:0.7em" >See the line: <font face="Consolas">Loading driver at 0x00006AEE000</font> is the memory location where your UEFI Application is loaded. </span></p>
 ```
  InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 6F0F028
  Loading driver at 0x00006AEE000 EntryPoint=0x00006AEE756 SampleApp.efi
@@ -1518,7 +1576,7 @@ UefiMain (
 // . . .
 	EFI_INPUT_KEY	   Key;
 	// ADD the following line
-    DEBUG ((EFI_D_INFO, "My Entry point: 0x%08x\r\n", (CHAR16*)UefiMain )  );
+    DEBUG ((EFI_D_INFO, "My Entry point: 0x%p\r\n", (CHAR16*)UefiMain )  );
 ```
 <p style="line-height:90%"><span style="font-size:0.7em" >When you print out the debug.log again, the exact entry point for your code will show.</span><br>
 <span style="font-size:0.5em" >This is useful to double check symbols are fixed up to the correct line numbers in the source file.</span></p>
@@ -1542,12 +1600,12 @@ Note:
 bash$ cd ~/run-ovmf/hda-contents
 bash$ gdb --tui 
 ```
-<span style="font-size:0.7em" >Load your UEFI Application SampleApp.efi with the "`file`" command.</span>
+<span style="font-size:0.7em" >Load your UEFI Application SampleApp.efi with the "<font face="Consolas">file</font>" command.</span>
 ```
  (gdb) file SampleApp.efi
  Reading symbols from SampleApp.efi...(no debugging symbols found)...done. 
 ```
-<p style="line-height:90%"><span style="font-size:0.7em" >Check where GDB has for ".text" and ".data" offsets with "`info files`" command.</span></p>
+<p style="line-height:90%"><span style="font-size:0.7em" >Check where GDB has for ".text" and ".data" offsets with "<font face="Consolas">info files</font>" command.</span></p>
 ```
  (gdb) info files
  Symbols from "/home/u-mypc/run-ovmf/hda-contents/SampleApp.efi".
@@ -1570,7 +1628,7 @@ Note:
 <p align="right"><span class="gold" ><b>Lab 5.7: Calculate Addresses</b></span></p>
 <br>
 <p style="line-height:80%"><span style="font-size:0.7em" >We need to calculate our addresses for ".text" and ".data" section.</span><br>
-<span style="font-size:0.5em" > The application is loaded under `0x00006AEE000` (loading driver point - <b>NOT Entrypoint</b>) and we know text and data offsets.</span></p>
+<span style="font-size:0.5em" > The application is loaded under <font face="Consolas">0x00006AEE000</font> (loading driver point - <b>NOT Entrypoint</b>) and we know text and data offsets.</span></p>
 ```
  text = 0x00006AEE000  +  0x00000240 = 0x06AEE240
  data = 0x00006AEE000  +  0x00000240 + 0x000028c0 = 0x06AF0B00 
@@ -1591,7 +1649,7 @@ Note:
 @title[Lab 5.8: Load the Symbols for SampleApp]
 <p align="right"><span class="gold" ><b>Lab 5.8: Load the Symbols for SampleApp</b></span></p>
 <br>
-<p style="line-height:90%"><span style="font-size:0.7em" >Load the symbols with the fixed up address using SampleApp output .debug file using the "`add-symbol-file`" command:</span></p>
+<p style="line-height:90%"><span style="font-size:0.7em" >Load the symbols with the fixed up address using SampleApp output .debug file using the "<font face="Consolas">add-symbol-file</font>" command:</span></p>
 ```
 (gdb) add-symbol-file SampleApp.debug 0x06AEE240 -s .data 0x06AF0B00 
 add symbol table from file "SampleApp.debug" at
@@ -1641,7 +1699,7 @@ Note:
 - For the GDB commands, only type what is after the "(gdb)" prompt
 
 
----?image=/assets/images/slides/Slide71.JPG
+---?image=/assets/images/slides/Slide47.JPG
 @title[Lab 5: GBD and QEMU Windows]
 <p align="right"><span class="gold" ><b>Lab 5: GBD and QEMU Windows</b></span></p>
 <span style="font-size:0.7em" >The GDB window will look similar to this</span>
@@ -1656,11 +1714,11 @@ Note:
 <BR>
 ### <p align="center"><span class="gold"   >Summary </span></p><br>
 <ul style="list-style-type:none">
- <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Define `DebugLib` and its attributes</span> </li>
+ <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Define <font face="Consolas">DebugLib</font> and its attributes</span> </li>
  <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;List the ways to debug</span></li>
- <li>@fa[certificate gp-bullet-gold]<span style="font-size:0.9em">&nbsp;&nbsp;Using PCDs to Configure `DebugLib` - LAB </span> </li>
+ <li>@fa[certificate gp-bullet-gold]<span style="font-size:0.9em">&nbsp;&nbsp;Using PCDs to Configure <font face="Consolas">DebugLib</font> - LAB </span> </li>
  <li>@fa[certificate gp-bullet-ltgreen]<span style="font-size:0.9em">&nbsp;&nbsp;Change Compiler & Linker Flags for debugging</span></li>
- <li>@fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Change the `DebugLib` instance to modify the debug<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output - LAB</span> </li>
+ <li>@fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Change the <font face="Consolas">DebugLib</font> instance to modify the debug<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output - LAB</span> </li>
  <li>@fa[certificate gp-bullet-magenta]<span style="font-size:0.9em">&nbsp;&nbsp;Debug EDK II using GDB - LAB</span> </li>
 </ul>
 
