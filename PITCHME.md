@@ -519,6 +519,7 @@ SampleApp/SampleApp.inf
 
 @snap[north-west span-100 ]
 <br>
+<br>
 <span style="font-size:0.8em" >Skip if Lab <a href="https://gitpitch.com/tianocore-training/Writing_UEFI_App_Lab/master#/">Writing UEFI App Lab</a> completed</span>
 <ul>
    <li><span style="font-size:0.8em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_Linux_Ovmf_Lab/master#/">Lab Setup</a> from previous Labs  </span></li>
