@@ -471,8 +471,6 @@ This lab uses code from a previous exercise as a starting point (refer to  Writi
 ---
 @title[Lab 1: Catch Up SampleApp]
 <p align="right"><span class="gold" ><b>Lab 1: Catch up from previous lab</b></span></p>
-<br>
-<br>
 <span style="font-size:0.8em" >Skip if Lab <a href="https://gitpitch.com/tianocore-training/Writing_UEFI_App_Lab/master#/">Writing UEFI App Lab</a> completed</span>
 <ul>
    <li><span style="font-size:0.8em" >Perform <a href="https://gitpitch.com/tianocore-training/Platform_Build_Linux_Ovmf_Lab/master#/">Lab Setup</a> from previous Labs  </span></li>
