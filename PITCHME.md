@@ -1480,7 +1480,7 @@ generate a symbol file and also use IA32 instead of x86_64</span></p><br>
  bash$ gedit RunQemu.sh
 ```
 <span style="font-size:0.8em" > Add the following to RunQemu.sh</span></span>
-```
+```shell
   qemu-system-i386 -s  -pflash bios.bin -hda fat:rw:hda-contents -net none -debugcon file:debug.log -global isa-debugcon.iobase=0x402 
 ```
 <span style="font-size:0.8em" >Save and Exit</span>
@@ -1557,7 +1557,7 @@ bash$ cd ~/run-ovmf
 bash$ cat debug.log
 ```
 <p style="line-height:90%"><span style="font-size:0.7em" >See the line: <font face="Consolas">Loading driver at 0x00006AEE000</font> is the memory location where your UEFI Application is loaded. </span></p>
-```
+```shell
  InstallProtocolInterface: 5B1B31A1-9562-11D2-8E3F-00A0C969723B 6F0F028
  Loading driver at 0x00006AEE000 EntryPoint=0x00006AEE756 SampleApp.efi
  InstallProtocolInterface: BC62157E-3E33-4FEC-9920-2D3B36D750DF 6F0FF10
