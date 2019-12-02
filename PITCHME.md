@@ -276,7 +276,7 @@ Note:
  #define DEBUG_PROPERTY_ASSERT_BREAKPOINT_ENABLED  0x10
  #define DEBUG_PROPERTY_ASSERT_DEADLOOP_ENABLED    0x20
 </pre>
-- another Note: Default value in Nt32 is 0x1f
+- another Note: Default value in EmulatorPkg is 0x1f
 
 - Determines which debugging features are enabled.
 
